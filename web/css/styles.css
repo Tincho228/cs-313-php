@@ -3,7 +3,10 @@
     margin:0;
 }
 body {
-    background-image: url("images/bk-image.jpg");
+    background-image: url("https://powerful-sierra-77608.herokuapp.com/images/bk-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .wrapper {
