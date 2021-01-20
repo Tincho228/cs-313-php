@@ -17,9 +17,9 @@
             <nav>
                 <ul>
                     <li><img src="images/home-icon.png" alt="home icon"></li>
-                    <li><a href="/week2/personalHomepage/index.php">Home</a></li>
+                    <li><a href="/personalHomepage/index.php">Home</a></li>
                     <li><img src="images/myprojects-icon.png" alt="my projects icon"></li>
-                    <li><a class="active" href="/week2/personalHomepage/projects.php">My projects</a></li>
+                    <li><a class="active" href="/personalHomepage/projects.php">My projects</a></li>
                 </ul>
 
             </nav>
@@ -35,9 +35,76 @@
                     <p>If you like coding, this is the place</p>
                 </div>
             </div>
-            
-            <h1 class="construction">PAGE IN CONSTRUCTION</h1>
-
+            <section class="aboutme">
+                <div class="left-col">
+                    <div class="white_div">
+                    <h5>Week 1</h5>
+                        <div class="images_box">
+                        <a href="#">
+                        <div class="card-study">
+                            <img src="images/hello.png" alt="">
+                            <p>hello.html</p>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
+                    
+                    <div class="white_div">
+                    <h5>Week 2</h5>
+                        <div class="images_box">
+                        <a href="#">
+                        <div class="card-study">
+                            <img src="images/boxes.png" alt="">
+                            <p>boxes.html</p>
+                        </div>
+                        </a>
+                        <a href="#">
+                        <div class="card-study">
+                            <img src="images/homepage.png" alt="">
+                            <p>homepage.php</p>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="white_div">
+                    <h5>Week 3</h5>
+                        <div class="images_box">
+                        <a href="#">
+                        <div class="card-study">
+                            <img src="images/boxes.png" alt="">
+                            <p>boxes.html</p>
+                        </div>
+                        </a>
+                        <a href="#">
+                        <div class="card-study">
+                            <img src="images/homepage.png" alt="">
+                            <p>homepage.php</p>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-col">
+                    <div class="white_div">
+                    <h1>CSE 341</h1>
+                    <p>BACK END DEVELOPMENT II</p>
+                    <p>All the links on the left are divided by weeks. Each week includes Team Activities and personal projects.</p>
+                    
+                    <h5>Social Media</h5>
+                    <div class="socialmedia_div">
+                        <img src="images/fcb-icon.png" alt="facebook link">
+                        <img src="images/tlg-icon.png" alt="telegram link">
+                        <img src="images/instg-icon.png" alt="instagram link">
+                    </div>
+                    <?php
+                    $day = date("l jS");
+                    $hour = date("h:i A");
+                    echo "<p class='strd-day'>".$day."</p>";
+                    echo "<p class='strd-hour'>".$hour."</p>";
+                    ?>
+                </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="wrapper_footer">

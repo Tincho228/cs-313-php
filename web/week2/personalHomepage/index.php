@@ -17,9 +17,9 @@
             <nav>
                 <ul>
                     <li><img src="images/home-icon.png" alt="home icon"></li>
-                    <li><a class="active" href="/week2/personalHomepage/index.php">Home</a></li>
+                    <li><a class="active" href="/personalHomepage/index.php">Home</a></li>
                     <li><img src="images/myprojects-icon.png" alt="my projects icon"></li>
-                    <li><a href="/week2/personalHomepage/projects.php">My projects</a></li>
+                    <li><a href="/personalHomepage/projects.php">My projects</a></li>
                 </ul>
 
             </nav>

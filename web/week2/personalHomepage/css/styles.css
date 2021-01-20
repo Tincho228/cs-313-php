@@ -117,6 +117,14 @@ nav ul li img {
 .white_div p {
     margin:20px 0;
 }
+.card-study img {
+    display: block;
+    margin:auto;
+}
+.card-study p {
+    margin-top:5px;
+    margin-bottom:0;
+}
 .button_see {
     text-decoration: none;
     color:white;
