@@ -47,7 +47,7 @@
             <div class="container-fluid bg-light w-75 m-10 position-relative">
 
                 <div class="row img-box">
-                    <img src="images/purchase.jpg" alt="image of purchase" class="img-center">
+                    <img src="personalHomepage/images/purchase.jpg" alt="image of purchase" class="img-center">
                     <h1 class="purchase-title">Your order<br> just shipped</h1>
                 </div>
                 <div class="row">
