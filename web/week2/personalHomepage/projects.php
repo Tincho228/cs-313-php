@@ -69,10 +69,10 @@
                     <div class="white_div">
                     <h5>Week 3</h5>
                         <div class="images_box">
-                        <a href="#">
+                        <a href="../team-week3-form.php">
                         <div class="card-study">
                             <img src="images/boxes.png" alt="">
-                            <p>boxes.html</p>
+                            <p>Team activity</p>
                         </div>
                         </a>
                         <a href="#">
