@@ -62,15 +62,9 @@ switch ($action){
         include "week3-checkout.php";
         break;
     case 'confirmation':
-        function test_input($data){
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-        $_SESSION['email'] = test_input($_POST['email']); 
-        $_SESSION['address'] = test_input($_POST['address']);
-
+        
+        $_SESSION['email'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $_SESSION['address'] = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
         include "week3-confirmation.php";
         break;
     case 'clearSession':
