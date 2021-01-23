@@ -43,7 +43,7 @@
                         <a href="#">
                         <div class="card-study">
                             <img src="images/hello.png" alt="">
-                            <p>hello.html</p>
+                            <a href="/week1/hello.html">Team Activity</a>
                         </div>
                         </a>
                         </div>
@@ -55,7 +55,7 @@
                         <a href="#">
                         <div class="card-study">
                             <img src="images/boxes.png" alt="">
-                            <p>boxes.html</p>
+                            <a href="/week2/team-week2.html">Team activity</a>
                         </div>
                         </a>
                         <a href="#">
