@@ -18,9 +18,7 @@
             <nav>
                 <ul>
                     <li class="logo"><h1>LongBEACH JEANS</h1></li>
-                <!--    <li><p class="no-margin-bottom">Home</p></li>
-                    <li><a href="">Contact</a></li>
-                    <li><p class="active no-margin-bottom"><span>
+            
                         <?php
                             if(isset($_SESSION['shopping_cart'])){
                                 $count = count($_SESSION['shopping_cart']);
@@ -30,12 +28,12 @@
                                 echo "0";
                             }
                         ?>
-                    </span>Cart</p></li>-->
+                    
                 </ul>
             </nav>
         </div>
         <div class="hero-image">
-            <img src="images/hero-jeans.jpg" alt="hero image of header">
+            <img src="personalHomepage/images/hero-jeans.jpg" alt="hero image of header">
             <div class="hero-bodycopy">
                 <h1>Fashion from California</h1>
                 <p>Contact Us</p>

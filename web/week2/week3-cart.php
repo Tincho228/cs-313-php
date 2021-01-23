@@ -18,7 +18,7 @@
             <nav>
                 <ul>
                     <li class="logo"><h1>LongBEACH JEANS</h1></li>
-                    <li><a href="/personalHomepage/control.php">Home</a></li>
+                    <li><a href="/personalHomepage/week3-control.php">Home</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a class="active" href="/week3-control.php?action=cart"><span>
                         <?php
@@ -35,7 +35,7 @@
             </nav>
         </div>
         <div class="hero-image">
-            <img src="images/hero-jeans.jpg" alt="hero image of header">
+            <img src="personalHomepage/images/hero-jeans.jpg" alt="hero image of header">
             <div class="hero-bodycopy">
                 <h1>Fashion from California</h1>
                 <p>Contact Us</p>

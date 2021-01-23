@@ -56,10 +56,10 @@ switch ($action){
                     unset($_SESSION['shopping_cart'][$key]);
                 }
             }
-        include "cart.php";
+        include "week3-cart.php";
         break;
     case 'checkout':
-        include "checkout.php";
+        include "week3-checkout.php";
         break;
     case 'confirmation':
         function test_input($data){
