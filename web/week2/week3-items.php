@@ -35,7 +35,7 @@
             </nav>
         </div>
         <div class="hero-image">
-            <img src="images/hero-jeans.jpg" alt="hero image of header">
+            <img src="personalHomepage/images/hero-jeans.jpg" alt="hero image of header">
             <div class="hero-bodycopy">
                 <h1>Fashion from California</h1>
                 <p>Contact Us</p>
@@ -98,56 +98,56 @@
                 'name' => 'Wrangler',
                 'price' => '35',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '5',
                 'name' => 'Levy´s',
                 'price' => '30',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '6',
                 'name' => 'Sportclub',
                 'price' => '29',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '7',
                 'name' => 'Calvin Klein',
                 'price' => '35',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '8',
                 'name' => 'Dafiti',
                 'price' => '30',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '9',
                 'name' => 'Truckers',
                 'price' => '29',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '10',
                 'name' => 'Light Blue',
                 'price' => '30',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '11',
                 'name' => 'Topshop',
                 'price' => '29',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             )
         );
         foreach($items_catalog as $products => $product){
