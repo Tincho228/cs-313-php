@@ -61,7 +61,7 @@
                         <a href="#">
                         <div class="card-study">
                             <img src="images/homepage.png" alt="capture homepage image">
-                            <a href="/week2/personalHomepage/index.php">homepage.php</p>
+                            <a href="/week2/personalHomepage/index.php">Homepage</p>
                         </div>
                         </a>
                         </div>
@@ -75,10 +75,10 @@
                             <p>Team activity</p>
                         </div>
                         </a>
-                        <a href="#">
+                        <a href="../week3-control.php">
                         <div class="card-study">
-                            <img src="images/homepage.png" alt="">
-                            <p>homepage.php</p>
+                            <img src="images/week3-capture.png" alt="prove actvity capture">
+                            <p>Shopping Cart</p>
                         </div>
                         </a>
                         </div>

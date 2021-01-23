@@ -50,7 +50,7 @@
                     <img src="personalHomepage/images/purchase.jpg" alt="image of purchase" class="img-center">
                     <h1 class="purchase-title">Your order<br> just shipped</h1>
                 </div>
-                <div class="row">
+                <div>
                     <h3>Purchase Details</h3>
                 <table class="table table-stripped">
                     <tr>
