@@ -20,7 +20,7 @@
                     <li class="logo"><h1>LongBEACH JEANS</h1></li>
                     <li><a href="/personalHomepage/control.php">Home</a></li>
                     <li><a href="">Contact</a></li>
-                    <li><a class="active" href="/personalHomepage/control.php?action=cart"><span>
+                    <li><a class="active" href="week3-control.php?action=cart"><span>
                         <?php
                             if(isset($_SESSION['shopping_cart'])){
                                 $count = count($_SESSION['shopping_cart']);
@@ -50,7 +50,7 @@
             <div class="row row-cols-2 m-10">  
                 <div class="col bg-light">
                     <h2 class="m-10">Shipping information</h2>
-                    <form method="post" action="/personalHomepage/control.php">
+                    <form method="post" action="week3-control.php">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" name='email' class="form-control" id="email" aria-describedby="emailHelp" required>
@@ -102,7 +102,7 @@
                         ?>
                         </table>
                         <div class="d-flex justify-content-end">
-                            <a class="btn btn-primary m-10" href="/personalHomepage/control.php?action=cart">Go to Cart</a>
+                            <a class="btn btn-primary m-10" href="week3-control.php?action=cart">Go to Cart</a>
                         </div>
                     </div>
                 </div> 

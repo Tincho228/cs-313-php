@@ -45,7 +45,7 @@ switch ($action){
             );
             $_SESSION['shopping_cart'][0] = $item_array;
         }
-        include "items.php";
+        include "week3-items.php";
         break;
     case 'cart':
         include "cart.php";
@@ -71,16 +71,16 @@ switch ($action){
         $_SESSION['email'] = test_input($_POST['email']); 
         $_SESSION['address'] = test_input($_POST['address']);
 
-        include "confirmation.php";
+        include "week3-confirmation.php";
         break;
     case 'clearSession':
         unset($_SESSION['email']); 
         unset($_SESSION['address']); 
         unset($_SESSION['shopping_cart']);
-        include "items.php";
+        include "week3-items.php";
         break;
     default:
-    include "items.php";
+    include "week3-items.php";
  }
 
 ?>

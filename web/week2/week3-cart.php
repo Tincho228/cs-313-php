@@ -20,7 +20,7 @@
                     <li class="logo"><h1>LongBEACH JEANS</h1></li>
                     <li><a href="/personalHomepage/control.php">Home</a></li>
                     <li><a href="">Contact</a></li>
-                    <li><a class="active" href="/personalHomepage/control.php?action=cart"><span>
+                    <li><a class="active" href="/week3-control.php?action=cart"><span>
                         <?php
                             if(isset($_SESSION['shopping_cart'])){
                                 $count = count($_SESSION['shopping_cart']);
@@ -67,7 +67,7 @@
                     <td><?php echo $values['quantity']; ?></td>
                     <td>$<?php echo $values['price']; ?></td>
                     <td><?php echo number_format($values['quantity']*$values['price'], 2) ?></td>
-                    <td><a href="/personalHomepage/control.php?action=delete&id=<?php echo $values['itemId']; ?>"><span class="text-danger">Remove</span></a></td>
+                    <td><a href="week3-control.php?action=delete&id=<?php echo $values['itemId']; ?>"><span class="text-danger">Remove</span></a></td>
                 </tr>
                 <?php
                     $total = $total + ($values['quantity']*$values['price']);
@@ -84,11 +84,11 @@
                 ?>
             </table>
             <div class="d-flex justify-content-end">
-                    <a class="btn btn-primary m-10" href="/personalHomepage/control.php">Go back Shopping</a>
+                    <a class="btn btn-primary m-10" href="week3-control.php">Go back Shopping</a>
                         <?php 
                             if(isset($total)){
                                 if($total != "0"){
-                                    echo '<a class="btn btn-dark m-10" href="/personalHomepage/control.php?action=checkout">Checkout</a>';}
+                                    echo '<a class="btn btn-dark m-10" href="week3-control.php?action=checkout">Checkout</a>';}
                             }
                         ?>
             </div>

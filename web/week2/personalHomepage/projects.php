@@ -71,7 +71,7 @@
                         <div class="images_box">
                         <a href="../team-week3-form.php">
                         <div class="card-study">
-                            <img src="images/boxes.png" alt="">
+                            <img src="images/forms.png" alt="team activity week3 image">
                             <p>Team activity</p>
                         </div>
                         </a>

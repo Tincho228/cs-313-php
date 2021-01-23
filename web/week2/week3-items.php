@@ -20,7 +20,7 @@
                     <li class="logo"><h1>LongBEACH JEANS</h1></li>
                     <li><a class="active" href="">Home</a></li>
                     <li><a href="">Contact</a></li>
-                    <li><a href="/personalHomepage/control.php?action=cart"><span>
+                    <li><a href="week3-control.php?action=cart"><span>
                         <?php
                             if(isset($_SESSION['shopping_cart'])){
                                 $count = count($_SESSION['shopping_cart']);
@@ -73,7 +73,7 @@
             )
         );
         foreach($items_offert as $products => $product){
-            $form = "<form method='post' action='control.php'>";
+            $form = "<form method='post' action='week3-control.php'>";
             $form .="<div class='card-product'>";
             $form .="<img src=".$product['path']." alt=".$product['name'].">";
             $form .="<p class='card-title'>".$product['name']."</p>";
@@ -151,7 +151,7 @@
             )
         );
         foreach($items_catalog as $products => $product){
-            $form = "<form method='post' action='control.php'>";
+            $form = "<form method='post' action='week3-control.php'>";
             $form .="<div class='card-product'>";
             $form .="<img src=".$product['path']." alt=".$product['name'].">";
             $form .="<p class='card-title'>".$product['name']."</p>";

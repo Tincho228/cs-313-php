@@ -49,7 +49,7 @@
             <div class="container-fluid bg-light w-75 m-10 position-relative">
 
                 <div class="row img-box">
-                    <img src="images/purchase.jpg.jpg" alt="image of purchase" class="img-center">
+                    <img src="images/purchase.jpg" alt="image of purchase" class="img-center">
                     <h1 class="purchase-title">Your order<br> just shipped</h1>
                 </div>
                 <div class="row">
@@ -96,7 +96,7 @@
                     <p>Address: <?php echo $_SESSION['address']; ?></p>
                     <hr>
                 </div>
-                <a class="btn btn-dark" href="/personalHomepage/control.php?action=clearSession">Start shopping again!</a>
+                <a class="btn btn-dark" href="week3-control.php?action=clearSession">Start shopping again!</a>
             
             </div>
         </div>
