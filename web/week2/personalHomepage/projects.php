@@ -40,47 +40,47 @@
                     <div class="white_div">
                     <h5>Week 1</h5>
                         <div class="images_box">
-                        
+                        <a href="#">
                         <div class="card-study">
                             <img src="images/hello.png" alt="capture page image">
                             <a href="week2/team-week1.html">Team Activity</a>
                         </div>
-                        
+                        </a>
                         </div>
                     </div>
                     
                     <div class="white_div">
                     <h5>Week 2</h5>
                         <div class="images_box">
-                        
+                        <a href="#">
                         <div class="card-study">
                             <img src="images/boxes.png" alt="capture page image">
                             <a href="week2/team-week2.html">Team activity</a>
                         </div>
-                        
-                        
+                        </a>
+                        <a href="#">
                         <div class="card-study">
                             <img src="images/homepage.png" alt="capture homepage image">
                             <a href="/week2/personalHomepage/index.php">homepage.php</p>
                         </div>
-                        
+                        </a>
                         </div>
                     </div>
                     <div class="white_div">
                     <h5>Week 3</h5>
                         <div class="images_box">
-                        
+                        <a href="#">
                         <div class="card-study">
                             <img src="images/boxes.png" alt="">
                             <p>boxes.html</p>
                         </div>
-                        
+                        </a>
                         <a href="#">
                         <div class="card-study">
                             <img src="images/homepage.png" alt="">
                             <p>homepage.php</p>
                         </div>
-                        
+                        </a>
                         </div>
                     </div>
                 </div>
