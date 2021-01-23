@@ -48,7 +48,7 @@ switch ($action){
         include "week3-items.php";
         break;
     case 'cart':
-        include "cart.php";
+        include "week3-cart.php";
         break; 
     case 'delete':
             foreach($_SESSION['shopping_cart'] as $key => $values){

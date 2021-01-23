@@ -55,21 +55,21 @@
                 'name' => 'Beach Season',
                 'price' => '35',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '2',
                 'name' => 'Open Sunset',
                 'price' => '30',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             ),
             array(
                 'id' => '3',
                 'name' => 'Heritage',
                 'price' => '29',
                 'quantity' => '1',
-                'path' => 'images/product1.JPG'
+                'path' => 'personalHomepage/images/product1.JPG'
             )
         );
         foreach($items_offert as $products => $product){
