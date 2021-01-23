@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/week2/css/week2-styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="js/jquery.js"></script>
@@ -40,47 +40,47 @@
                     <div class="white_div">
                     <h5>Week 1</h5>
                         <div class="images_box">
-                        <a href="#">
+                        
                         <div class="card-study">
-                            <img src="images/hello.png" alt="">
-                            <a href="week1/hello.html">Team Activity</a>
+                            <img src="images/hello.png" alt="capture page image">
+                            <a href="week2/team-week1.html">Team Activity</a>
                         </div>
-                        </a>
+                        
                         </div>
                     </div>
                     
                     <div class="white_div">
                     <h5>Week 2</h5>
                         <div class="images_box">
-                        <a href="#">
+                        
                         <div class="card-study">
-                            <img src="images/boxes.png" alt="">
+                            <img src="images/boxes.png" alt="capture page image">
                             <a href="week2/team-week2.html">Team activity</a>
                         </div>
-                        </a>
-                        <a href="#">
+                        
+                        
                         <div class="card-study">
-                            <img src="images/homepage.png" alt="">
-                            <p>homepage.php</p>
+                            <img src="images/homepage.png" alt="capture homepage image">
+                            <a href="/week2/personalHomepage/index.php">homepage.php</p>
                         </div>
-                        </a>
+                        
                         </div>
                     </div>
                     <div class="white_div">
                     <h5>Week 3</h5>
                         <div class="images_box">
-                        <a href="#">
+                        
                         <div class="card-study">
                             <img src="images/boxes.png" alt="">
                             <p>boxes.html</p>
                         </div>
-                        </a>
+                        
                         <a href="#">
                         <div class="card-study">
                             <img src="images/homepage.png" alt="">
                             <p>homepage.php</p>
                         </div>
-                        </a>
+                        
                         </div>
                     </div>
                 </div>
