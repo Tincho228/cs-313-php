@@ -41,9 +41,9 @@ function linkBuilder($search_array){
    $links = "<ul>";
   foreach($search_array as $array){
   //  $links.= "<li><a href='team-week5-index.php?action=detail&invId=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a></li>";
-  $links .= $array['book'];
-  $links .= $array['chapter'];
-  $links .= $array['verse'];
+  $links .= $array[0]['book'];
+  $links .= $array[0]['chapter'];
+  $links .= $array[0]['verse'];
   }
   $links .= "</ul>";
   return $links;
