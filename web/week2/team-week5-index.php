@@ -40,7 +40,10 @@ function getBookname($book){
 function linkBuilder($search_array){
    $links = "<ul>";
   foreach($search_array as $array){
-    $links.= "<li><a href='/phpmotors/vehicles/?action=vehicle-detail&invId=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a></li>";
+  //  $links.= "<li><a href='team-week5-index.php?action=detail&invId=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a></li>";
+  $links .= $array['book'];
+  $links .= $array['chapter'];
+  $links .= $array['verse'];
   }
   $links .= "</ul>";
   return $links;
