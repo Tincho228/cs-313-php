@@ -17,6 +17,11 @@
            <h1>Scriptures Resources</h1> 
           <label for="text" class="form-label">Search for a book</label>
           <input type="text" class="form-control" id="text" name="book">
+          <?php
+          if(isset($message)){
+            echo $message;
+          }
+          ?>
       </div>
       <button type="submit" name="action" class="btn btn-primary" value = "search">Search</button>
   </form>

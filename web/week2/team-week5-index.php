@@ -27,7 +27,7 @@ function connection(){
 // function that search by Book name;
 function getBookname($book){
     $db =  connection(); 
-    $sql = 'SELECT book, chapter, verse, content FROM public.scriptures WHERE book = :book';
+    $sql = 'SELECT id, book, chapter, verse, content FROM public.scriptures WHERE book = :book';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':book', $book, PDO::PARAM_STR);
     $stmt->execute();
@@ -35,6 +35,14 @@ function getBookname($book){
     // Close the database interaction
     $stmt->closeCursor();
     return $info;
+}
+// function that build the links.
+function linkBuilder($search_array){
+  
+  foreach($search_array as $array){
+  
+    echo "<li><a href='/phpmotors/vehicles/?action=vehicle-detail&invId=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a>";
+  }
 }
 $action = filter_input(INPUT_POST, 'action');
  if ($action == NULL){
@@ -47,9 +55,11 @@ switch ($action){
     case 'search':
         $book = filter_input(INPUT_POST,'book', FILTER_SANITIZE_STRING);
         $search_array = getBookname($book);
-        
-        print_r($search_array);
-        //include "team-week5-details-scriptures.php";
+        if(count($search_array)<1){
+          $message ='<p class"text-danger">Sorry, no information could be found.</p>' ;
+          include "team-week5-scriptures.php";
+          }
+        include "team-week5-details-scriptures.php";
         break;
     default:
     include "team-week5-scriptures.php";
