@@ -57,6 +57,7 @@ switch ($action){
         if(count($search_array)<1){
           $message ='<p class"text-danger">Sorry, no information could be found.</p>' ;
           include "team-week5-scriptures.php";
+          exit;
           }
         $detail_list = linkBuilder($search_array);
         include "team-week5-scriptures.php";
