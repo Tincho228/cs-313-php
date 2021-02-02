@@ -39,8 +39,8 @@ function getBookname($book){
 // function that build the links.
 function linkBuilder($search_array){
    $links = "<ul>";
-  foreach($search_array as $array => $value){
-  $links.= "<li><a href='team-week5-index.php?action=detail&invId=".urlencode($value['id'])."'>".$value['book']." ".$value['chapter'].":".$value['verse']."</a></li>";
+  foreach($search_array as $array){
+  $links.= "<li><a href='team-week5-index.php?action=detail&invId=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a></li>";
   
   }
   $links .= "</ul>";
@@ -62,6 +62,7 @@ switch ($action){
           }
         
         $detail_list = linkBuilder($search_array);
+        print_r($search_array);
         include "team-week5-scriptures.php";
         break;
     default:
