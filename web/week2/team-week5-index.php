@@ -59,8 +59,9 @@ switch ($action){
           include "team-week5-scriptures.php";
           exit;
           }
-        $detail_list = linkBuilder($search_array);
-        include "team-week5-scriptures.php";
+        print_r($search_array);
+        /*$detail_list = linkBuilder($search_array);
+        include "team-week5-scriptures.php";*/
         break;
     default:
     include "team-week5-scriptures.php";
