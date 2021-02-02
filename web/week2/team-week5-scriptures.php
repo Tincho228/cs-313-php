@@ -26,7 +26,7 @@
       <button type="submit" name="action" class="btn btn-primary" value = "search">Search</button>
       <?php
       if(isset($detail_list)){
-        print_r($detail_list);
+        echo $detail_list;
       }
       ?>
   </form>
