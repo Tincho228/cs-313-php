@@ -60,7 +60,7 @@ switch ($action){
           exit;
           }
         
-        $detail_list = $search_array;
+        $detail_list = linkBuilder($search_array);
         include "team-week5-scriptures.php";
         break;
     default:
