@@ -38,18 +38,17 @@ function getBookname($book){
 }
 // function that build the links.
 function linkBuilder($search_array){
-  
+   $links = "<ul>";
   foreach($search_array as $array){
-  
-    echo "<li><a href='/phpmotors/vehicles/?action=vehicle-detail&invId=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a>";
+    $links.= "<li><a href='/phpmotors/vehicles/?action=vehicle-detail&invId=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a></li>";
   }
+  $links .= "</ul>";
+  return $links;
 }
 $action = filter_input(INPUT_POST, 'action');
  if ($action == NULL){
   $action = filter_input(INPUT_GET, 'action');
  }
-
-// Check if the firstname cookie exists, get its value
 
 switch ($action){
     case 'search':
@@ -59,7 +58,8 @@ switch ($action){
           $message ='<p class"text-danger">Sorry, no information could be found.</p>' ;
           include "team-week5-scriptures.php";
           }
-        include "team-week5-details-scriptures.php";
+        $detail_list = linkBuilder($search_array);
+        include "team-week5-scriptures.php";
         break;
     default:
     include "team-week5-scriptures.php";

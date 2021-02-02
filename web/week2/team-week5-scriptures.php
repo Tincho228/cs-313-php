@@ -24,6 +24,11 @@
           ?>
       </div>
       <button type="submit" name="action" class="btn btn-primary" value = "search">Search</button>
+      <?php
+      if(isset($detail_list)){
+        echo $message;
+      }
+      ?>
   </form>
   </div>
     <!-- Optional JavaScript -->
