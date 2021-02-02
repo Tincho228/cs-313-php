@@ -46,9 +46,9 @@ $action = filter_input(INPUT_POST, 'action');
 switch ($action){
     case 'search':
         $book = filter_input(INPUT_POST,'book', FILTER_SANITIZE_STRING);
-        //$result = getBookname($book);
+        $search_array = getBookname($book);
         
-        echo $book;
+        print_r($search_array);
         //include "team-week5-details-scriptures.php";
         break;
     default:
