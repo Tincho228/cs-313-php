@@ -81,6 +81,7 @@ switch ($action){
           exit;
           }
         $detail_list = linkBuilder($search_array);
+        print_r($search_array);
         include "team-week5-scriptures.php";
         break;
     case 'detail':
