@@ -85,9 +85,11 @@ switch ($action){
         include "team-week5-scriptures.php";
         break;
     case 'detail':
-        echo "hola";
-      /*  $id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
+        
+        $id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
+        echo $id."<br>";
         $content = getScriptureContent($id);
+        print_r($content);/*
         $content_detail = buildContentPage($content);
         include "team-week5-details.php";*/
     break;
