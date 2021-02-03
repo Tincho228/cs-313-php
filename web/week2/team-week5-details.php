@@ -11,7 +11,11 @@
   </head>
   <body>
   <div class="container">
-        
+        <?php
+        if(isset($content_detail)){
+          echo $content_detail;
+        }
+        ?>
   </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

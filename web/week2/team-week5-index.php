@@ -38,14 +38,34 @@ function getBookname($book){
 }
 // function that build the links.
 function linkBuilder($search_array){
-   $links = "<ul>";
+   $links = "<p>Search Resuts</p>";
+   $links .= "<ul>";
   foreach($search_array as $array){
-  $links.= "<li><a href='team-week5-index.php?action=detail&invId=".urlencode($array[0])."'>".$array[1]." ".$array[2].":".$array[3]."</a></li>";
+  $links.= "<li><a href='team-week5-index.php?action=detail&id=".urlencode($array[0])."'>".$array[1]." ".$array[2].":".$array[3]."</a></li>";
   
   }
   $links .= "</ul>";
   return $links;
 }
+function getScriptureContent($id){
+  $db =  connection(); 
+    $sql = 'SELECT id, book, chapter, verse, content FROM public.scriptures WHERE id = :id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':book', $id, PDO::PARAM_STR);
+    $stmt->execute();
+    $info = $stmt->fetch(PDO::FETCH_NUM);
+    // Close the database interaction
+    $stmt->closeCursor();
+    return $info;
+}
+function buildContentPage($content){
+  $det = "<h1>Scripture Details</h1>";
+  $det.= "<h4>".$content[1]." ".$content[2].":".$content[3]."</h4>";
+  $det.= "<p>$content[4]</p>";
+  return $det;
+}
+
+
 $action = filter_input(INPUT_POST, 'action');
  if ($action == NULL){
   $action = filter_input(INPUT_GET, 'action');
@@ -62,8 +82,15 @@ switch ($action){
           }
         
         $detail_list = linkBuilder($search_array);
+        print_r($search_array);
         include "team-week5-scriptures.php";
         break;
+    case 'detail':
+        $id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
+        $content = getScriptureContent($id);
+        $content_detail = buildContentPage($content);
+        include "team-week5-details.php";
+    break;
     default:
     include "team-week5-scriptures.php";
     break;
