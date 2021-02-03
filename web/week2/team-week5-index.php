@@ -61,7 +61,7 @@ function getScriptureContent($id){
 function buildContentPage($content){
   $det = "<h1>Scripture Details</h1>";
   $det.= "<h4>".$content[1]." ".$content[2].":".$content[3]."</h4>";
-  $det.= "<p>$content[4]</p>";
+  $det.= "<p>\"$content[4]\"</p>";
   return $det;
 }
 
