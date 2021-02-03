@@ -82,14 +82,14 @@ switch ($action){
           }
         
         $detail_list = linkBuilder($search_array);
-        print_r($search_array);
         include "team-week5-scriptures.php";
         break;
     case 'detail':
-        $id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
+        echo "hola";
+      /*  $id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
         $content = getScriptureContent($id);
         $content_detail = buildContentPage($content);
-        include "team-week5-details.php";
+        include "team-week5-details.php";*/
     break;
     default:
     include "team-week5-scriptures.php";
