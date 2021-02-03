@@ -51,7 +51,7 @@ function getScriptureContent($id){
   $db =  connection(); 
     $sql = 'SELECT id, book, chapter, verse, content FROM public.scriptures WHERE id = :id';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':book', $id, PDO::PARAM_STR);
+    $stmt->bindValue(':book', $id, PDO::PARAM_INT);
     $stmt->execute();
     $info = $stmt->fetch(PDO::FETCH_NUM);
     // Close the database interaction
