@@ -83,6 +83,17 @@
                         </a>
                         </div>
                     </div>
+                    <div class="white_div">
+                    <h5>Week 5</h5>
+                        <div class="images_box">
+                        <a href="../team-week5-index.php">
+                        <div class="card-study">
+                            <img src="images/forms.png" alt="team activity week5 image">
+                            <p>Team activity</p>
+                        </div>
+                        </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="right-col">
                     <div class="white_div">
