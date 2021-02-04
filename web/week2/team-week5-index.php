@@ -31,7 +31,7 @@ function getBookname($book){
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':book', $book, PDO::PARAM_STR);
     $stmt->execute();
-    $info = $stmt->fetchAll(PDO::FETCH_NUM);
+    $info = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // Close the database interaction
     $stmt->closeCursor();
     return $info;

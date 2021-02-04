@@ -21,7 +21,6 @@
                     <li><img src="images/myprojects-icon.png" alt="my projects icon"></li>
                     <li><a href="/week2/personalHomepage/projects.php">My projects</a></li>
                 </ul>
-
             </nav>
         </header>
         <main>
