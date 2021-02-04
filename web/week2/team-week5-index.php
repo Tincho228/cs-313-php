@@ -41,7 +41,7 @@ function linkBuilder($search_array){
    $links = "<p>Search Resuts</p>";
    $links .= "<ul>";
   foreach($search_array as $array){
-  $links.= "<li><a href='team-week5-index.php?action=detail&id=".urlencode($array[0])."'>".$array[1]." ".$array[2].":".$array[3]."</a></li>";
+  $links.= "<li><a href='team-week5-index.php?action=detail&id=".urlencode($array['id'])."'>".$array['book']." ".$array['chapter'].":".$array['verse']."</a></li>";
   
   }
   $links .= "</ul>";
@@ -53,15 +53,15 @@ function getScriptureContent($id){
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
-    $info = $stmt->fetch(PDO::FETCH_NUM);
+    $info = $stmt->fetch(PDO::FETCH_ASSOC);
     // Close the database interaction
     $stmt->closeCursor();
     return $info;
 }
 function buildContentPage($content){
   $det = "<h1>Scripture Details</h1>";
-  $det.= "<h4>".$content[1]." ".$content[2].":".$content[3]."</h4>";
-  $det.= "<p>\"$content[4]\"</p>";
+  $det.= "<h4>".$content['book']." ".$content['chapter'].":".$content['verse']."</h4>";
+  $det.= "<p>\"".$content['content']."\"</p>";
   return $det;
 }
 
