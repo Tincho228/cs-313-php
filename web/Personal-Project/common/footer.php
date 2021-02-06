@@ -20,7 +20,7 @@
                         </div>
                         <div class="col">
                             <div class="container">
-                            <img class="logo_grande" src="images/logo_grande.png" alt="logo image">
+                            <img class="logo_grande" src="https://powerful-sierra-77608.herokuapp.com/Personal-Project/images/logo_grande.png" alt="logo image">
                             </div>
                             <h1 class="text-light text-center">MAFUBA GYM & FITNESS</h1>
                         </div>
