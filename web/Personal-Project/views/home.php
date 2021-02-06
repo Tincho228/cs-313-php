@@ -292,7 +292,7 @@
                     </div>
                     <div class="row justify-content-around section-padding">
                         <div class="card" id="instructor-card" style="width: 12rem;">
-                            <img class="card-img-top" id="instructor-image" src="/personal-project/images/instructor-Robert.jpg"
+                            <img class="card-img-top" id="instructor-image" src="../images/instructor-Robert.jpg"
                                 alt="Robert image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Robert</h5>
@@ -302,7 +302,7 @@
                             </div>
                         </div>
                         <div class="card" id="instructor-card" style="width: 12rem;">
-                            <img class="card-img-top" id="instructor-image" src="/personal-project/images/instructor-Robert.jpg"
+                            <img class="card-img-top" id="instructor-image" src="../images/instructor-Robert.jpg"
                                 alt="Robert image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Robert</h5>
@@ -312,7 +312,7 @@
                             </div>
                         </div>
                         <div class="card" id="instructor-card" style="width: 12rem;">
-                            <img class="card-img-top" id="instructor-image" src="/personal-project/images/instructor-Robert.jpg"
+                            <img class="card-img-top" id="instructor-image" src="../images/instructor-Robert.jpg"
                                 alt="Robert image cap">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Robert</h5>
