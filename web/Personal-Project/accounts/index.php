@@ -2,7 +2,7 @@
 
 /*********************************
   
-    THIS IS THE MAIN CONTROLLER
+    THIS IS THE ACCOUNTS CONTROLLER
 
 **********************************/
 
@@ -11,7 +11,7 @@ session_start();
 //$_SESSION['loggedin'] = 0;
 
 // Get the database connection file
-require_once 'library/connections.php';/*
+require_once '../library/connections.php';/*
 // Get the PHP Motors model for use as needed
 require_once 'model/main-model.php';
 // Get the functions library
@@ -26,12 +26,20 @@ $action = filter_input(INPUT_POST, 'action');
 // Check if the firstname cookie exists, get its value
 
 switch ($action){
-    case 'template':
-     include "views/template.php";
-    break;
-     
+    case 'registration':
+        include "../views/registration.php";
+        break;
+    case 'register': 
+        echo "registered";
+        break;
+    case 'login':
+        include "../views/login.php";
+        break;
+    case 'Login':
+        echo "loggedin";
+        break;
     default:
-     include "views/home.php";
-     break;
+        include "../views/home.php";
+        break;
  }
  ?>
