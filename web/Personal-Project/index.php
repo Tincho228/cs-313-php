@@ -27,10 +27,12 @@ $action = filter_input(INPUT_POST, 'action');
 
 switch ($action){
     case 'template':
+    echo "template";
      include 'view/template.php';
     break;
      
     default:
      include 'views/home.php';
+     echo "home";
  }
  ?>
