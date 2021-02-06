@@ -1,0 +1,60 @@
+.container-hero-image {
+    background-image: url("images/hero-image.jpg");
+    background-size: cover;
+    height:500px;
+}
+.hero-title {
+    text-shadow: 0px 3px 9px black;
+}
+.navbar-logo {
+    width:40px;
+    margin-right:10px;
+}
+.section-padding {
+    padding:30px 0;
+}
+.card-margin-10 {
+    margin:10px 0;
+}
+.user-image {
+    width:40px;
+    border-radius: 50%;
+}
+#instructor-image{
+    border-radius: 50% !important;
+}
+#instructor-card {
+    border:1px solid white !important;
+}
+.free-class-bg-image {
+    background-image: url("images/bg-free-class.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.bg-free-class-form {
+    background-color: #ffffff70;
+    padding:40px;
+}
+.bg-free-class-form h1 {
+    margin-bottom:30px;
+}
+.social-icon {
+    margin:0px 10px;
+}
+.logo_grande {
+    width:150px;
+    margin:30px auto;
+    display:block;
+}
+.modal-card {
+    margin:20px auto;
+    max-width:800px !important;
+}
+.modal-price {
+    border:1px solid gray;
+    padding:30px;
+    border-radius:15px;
+}
+
