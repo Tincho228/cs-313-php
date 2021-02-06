@@ -27,9 +27,9 @@
                             </ul>
                         </div>
                         <?php>
-                        if(!isset($_SESSION['loggedin'])){
+                        
                             echo '<a class="nav-link text-light" href="accounts/index.php?action=login" title="Click to register or login"><i class="fa fa-user" aria-hidden="true"></i> Log In </a>';
-                        }                   
+                                           
                         ?>
                     
                         
