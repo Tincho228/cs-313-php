@@ -30,7 +30,7 @@
                 <div class="container bg-light">
                     <div class="row justify-content-around section-padding">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="/personal-project/images/yoga.jpg" alt="Yoga Card image Cap">
+                            <img class="card-img-top" src="../images/yoga.jpg" alt="Yoga Card image Cap">
                             <div class="card-body bg-dark">
                                 <h5 class="card-title text-light">YOGA</h5>
                                 <p class="card-text text-light">A group of physical, mental, and spiritual practices or disciplines which originated in ancient India.
@@ -58,7 +58,7 @@
                                                     <div class="col-md-5 col-sm-12 ">
                                                         <div class="card" style="width: 18rem;">
                                                             <img class="card-img-top"
-                                                                src="/personal-project/images/yoga.jpg"
+                                                                src="../images/yoga.jpg"
                                                                 alt="Yoga Card image Cap">
                                                             <div class="card-body bg-dark">
                                                                 <h5 class="card-title text-light">YOGA</h5>
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="/personal-project/images/weight.jpg" alt="Weight card image Cap">
+                            <img class="card-img-top" src="../images/weight.jpg" alt="Weight card image Cap">
                             <div class="card-body bg-dark">
                                 <h5 class="card-title text-light">PERSONAL TRAINING</h5>
                                 <p class="card-text text-light">Programming Safe and Effective Workouts.
@@ -130,7 +130,7 @@
                                                     <div class="col-md-5 col-sm-12 ">
                                                         <div class="card" style="width: 18rem;">
                                                             <img class="card-img-top"
-                                                                src="/personal-project/images/weight.jpg"
+                                                                src="../images/weight.jpg"
                                                                 alt="Yoga Card image Cap">
                                                             <div class="card-body bg-dark">
                                                                 <h5 class="card-title text-light">PERSONAL TRAINING</h5>
@@ -163,7 +163,7 @@
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="/personal-project/images/spinning.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="../images/spinning.jpg" alt="Card image cap">
                             <div class="card-body bg-dark">
                                 <h5 class="card-title text-light">SPINNING</h5>
                                 <p class="card-text text-light">Some quick example text to build on the card title and make up the
@@ -192,7 +192,7 @@
                                                     <div class="col-md-5 col-sm-12 ">
                                                         <div class="card" style="width: 18rem;">
                                                             <img class="card-img-top"
-                                                                src="/personal-project/images/spinning.jpg"
+                                                                src="../images/spinning.jpg"
                                                                 alt="Yoga Card image Cap">
                                                             <div class="card-body bg-dark">
                                                                 <h5 class="card-title text-light">SPINNING</h5>
@@ -236,7 +236,7 @@
                 <div class="container section-padding">
                     <div class="card card-margin-10">
                         <div class="card-header bg-transparent">
-                            <img class="user-image" src="/personal-project/images/user_Linda.jpg" alt="small view of Jessica">
+                            <img class="user-image" src="../images/user_Linda.jpg" alt="small view of Jessica">
                             @RJessica
                         </div>
                         <div class="card-body">
@@ -249,7 +249,7 @@
                     </div>
                     <div class="card card-margin-10">
                         <div class="card-header bg-transparent">
-                            <img class="user-image" src="/personal-project/images/user_Linda.jpg" alt="small view of Jessica">
+                            <img class="user-image" src="../images/user_Linda.jpg" alt="small view of Jessica">
                             @RJessica
                         </div>
                         <div class="card-body">
@@ -262,7 +262,7 @@
                     </div>
                     <div class="card card-margin-10">
                         <div class="card-header bg-transparent">
-                            <img class="user-image" src="/personal-project/images/user_Linda.jpg" alt="small view of Jessica">
+                            <img class="user-image" src="../images/user_Linda.jpg" alt="small view of Jessica">
                             @RJessica
                         </div>
                         <div class="card-body">
