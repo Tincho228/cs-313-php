@@ -2,7 +2,7 @@
             <div class="container-fluid container-hero-image" style='background-color:url("images/hero-image.jpg");'>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
-                        <img class="navbar-logo" src="images/logo.png" alt="navbar logo">
+                        <img class="navbar-logo" src="https://powerful-sierra-77608.herokuapp.com/Personal-Project/images/logo.png" alt="navbar logo">
                         <a class="navbar-brand text-warning" href="#">MAFUBA</a>
                         
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
