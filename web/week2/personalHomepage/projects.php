@@ -92,6 +92,12 @@
                             <p>Team activity</p>
                         </div>
                         </a>
+                        <a href="personal-project/index.php">
+                        <div class="card-study">
+                            <img src="images/forms.png" alt="team activity week5 image">
+                            <p>Personal Project</p>
+                        </div>
+                        </a>
                         </div>
                     </div>
                 </div>
