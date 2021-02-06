@@ -13,7 +13,7 @@
     <title>Template</title>
 </head>
 <?php
-    include "common/header.php";
+    include "../common/header.php";
 ?>
 <main>
     <form action="../accounts/index.php" method="post" class="login-form">
@@ -49,7 +49,7 @@
 </main>
 
 <?php
-    include "common/footer.php";
+    include "../common/footer.php";
 ?>
 <body>
     <div class="wrapper-body">
