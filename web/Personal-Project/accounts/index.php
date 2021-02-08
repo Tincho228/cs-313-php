@@ -34,8 +34,9 @@ switch ($action){
         $cl_firstname = filter_input(INPUT_POST, 'cl_firstname', FILTER_SANITIZE_STRING);
         $cl_lastname = filter_input(INPUT_POST, 'cl_lastname', FILTER_SANITIZE_STRING);
         $cl_email = filter_input(INPUT_POST, 'cl_email', FILTER_SANITIZE_EMAIL);
+        $cl_phone = filter_input(INPUT_POST, 'cl_email', FILTER_SANITIZE_NUMBER_INT);
         $cl_password = filter_input(INPUT_POST, 'cl_password', FILTER_SANITIZE_STRING);
-        echo $cl_firstname. $cl_lastname. $cl_email. $cl_password;
+        echo $cl_firstname. $cl_lastname. $cl_email. $cl_password.$cl_phone;
         /*// Validating Email and Password with custom functions/
         $clientEmail = checkEmail($clientEmail);
         $checkPassword = checkPassword($clientPassword);

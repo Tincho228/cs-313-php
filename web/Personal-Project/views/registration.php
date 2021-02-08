@@ -17,7 +17,7 @@
 ?>
 <main>
 <div class="container">
-    
+
     <form action="../accounts/index.php" method="post" class="login-form">
         <h1 class="text-center text-light">Register now!</h1>
         <div class="form-group">
@@ -26,7 +26,7 @@
         </div>
         <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter name" required name="cl_lastname">
+            <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter last name" required name="cl_lastname">
         </div>
         <div class="form-group">
             <label for="email">Email address</label>
@@ -42,7 +42,6 @@
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
         </div>
-        
         <button type="submit" class="btn btn-primary" value="Login">Send message</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="register">
