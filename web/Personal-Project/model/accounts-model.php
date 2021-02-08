@@ -19,7 +19,7 @@ function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_pho
     $stmt->bindValue(':cl_lastname', $cl_lastname, PDO::PARAM_STR);
     $stmt->bindValue(':cl_email', $cl_email, PDO::PARAM_STR);
     $stmt->bindValue(':cl_password', $cl_password, PDO::PARAM_STR);
-    $stmt->bindValue(':cl_phone', $cl_password, PDO::PARAM_INT);
+    $stmt->bindValue(':cl_phone', $cl_phone, PDO::PARAM_INT);
     // Insert the data
     $stmt->execute();
     // Ask how many rows changed as a result of our insert
