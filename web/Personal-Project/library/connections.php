@@ -18,6 +18,7 @@ function herokuConnection(){
     catch (PDOException $ex)
     {
       echo 'Error!: ' . $ex->getMessage();
+      $_SESSION['message_a'] = "not connected";
       die();
     }
   }
