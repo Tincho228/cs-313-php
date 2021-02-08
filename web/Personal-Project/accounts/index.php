@@ -53,7 +53,8 @@ switch ($action){
         // Hash the checked password
         $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
         // Send the data to the model*/
-        $regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $_phone);
+        //$regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $_phone);
+        $regOutcome = regClient();
         // Check and report the result
         if ($regOutcome === 1) {
             setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
