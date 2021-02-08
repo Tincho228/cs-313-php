@@ -8,6 +8,7 @@ function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_pho
     // Create a connection object using the phpmotors connection function
     $db = herokuConnection();
     $rows = 1;
+    echo $db;
     return  $rows;
     /*
     // The SQL statement
