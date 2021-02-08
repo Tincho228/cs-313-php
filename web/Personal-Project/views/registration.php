@@ -16,8 +16,10 @@
     include "../common/header.php";
 ?>
 <main>
+<div class="container">
+    
     <form action="../accounts/index.php" method="post" class="login-form">
-        <h1 class="text-center text-light">Message Us For a 1 on 1 Coaching Session!</h1>
+        <h1 class="text-center text-light">Register now!</h1>
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required name="cl_firstname">
@@ -37,7 +39,7 @@
             <input type="number" class="form-control" id="cellphone" placeholder="Cell phone" required name="cl_phone">
         </div>
         <div class="form-group">
-            <label for="password">Cell Phone</label>
+            <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
         </div>
         
@@ -45,7 +47,7 @@
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="register">
     </form>
-
+    </div>
 </main>
 
 <?php
