@@ -11,7 +11,7 @@ session_start();
 //$_SESSION['loggedin'] = 0;
 
 // Get the database connection file
-require_once '../library/connections.php';
+require_once '../../library/connections.php';
 //require_once '../library/functions.php';
 require_once '../model/accounts-model.php';
 
@@ -53,8 +53,8 @@ switch ($action){
         // Hash the checked password
         $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
         // Send the data to the model*/
-        //$regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $_phone);
-        $regOutcome = regClient();
+        $regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $_phone);
+        
         // Check and report the result
         if ($regOutcome === 1) {
             setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');

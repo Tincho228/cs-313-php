@@ -4,16 +4,13 @@
 
 //This function will handle site registrations.
 
-//function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_phone){
-    function regClient(){
+function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_phone){
+    
     // Create a connection object using the phpmotors connection function
-    herokuConnection();
-    $rows = 1;
-    return $rows;
-    /*
+    $db = herokuConnection();
     // The SQL statement
-    $sql = "INSERT INTO public.clients (cl_firstname, cl_lastname, cl_email, cl_password, cl_phone)
-        VALUES ('Martin', 'Quintero','martin_quintero521@hotmail.com', 'Martin.2020', '123321')";
+    $sql = 'INSERT INTO public.clients (cl_firstname, cl_lastname, cl_email, cl_password, cl_phone)
+        VALUES (:cl_firstname, :cl_lastname, :cl_email, :cl_password, :cl_phone)';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
     
@@ -29,5 +26,5 @@
     // Close the database interaction
     $stmt->closeCursor();
     // Return the indication of success (rows changed)
-    return $rowsChanged;*/
+    return $rowsChanged;
    }
