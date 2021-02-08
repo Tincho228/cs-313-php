@@ -6,17 +6,17 @@
 function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_phone){
 //function regClient($cl_firstname){    
     
-    // Create a connection object using the phpmotors connection function
+    
     $db = herokuConnection();/*
     $sql = 'SELECT * FROM public.clients WHERE cl_firstname = :cl_firstname';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':cl_firstname', $cl_firstname, PDO::PARAM_STR);
     $stmt->execute();
     $info = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    // Close the database interaction
+    
     $stmt->closeCursor();
     return $info;*/
-    // The SQL statement
+    
     $sql = 'INSERT INTO public.clients (cl_firstname, cl_lastname, cl_email, cl_password, cl_phone)
         VALUES (:cl_firstname, :cl_lastname, :cl_email, :cl_password, :cl_phone)';
     // Create the prepared statement using the phpmotors connection
