@@ -6,7 +6,9 @@
 
 function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_phone){
     // Create a connection object using the phpmotors connection function
-    $db = herokuConnection();
+    $rows = 1;
+    return  $rows;
+    /*$db = herokuConnection();
     // The SQL statement
     $sql = 'INSERT INTO public.clients (cl_firstname, cl_lastname, cl_email, cl_password, cl_phone)
         VALUES (:cl_firstname, :cl_lastname, :cl_email, :cl_password, :cl_phone)';
@@ -27,5 +29,5 @@ function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_pho
     // Close the database interaction
     $stmt->closeCursor();
     // Return the indication of success (rows changed)
-    return $rowsChanged;
+    return $rowsChanged;*/
    }
