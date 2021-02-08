@@ -59,7 +59,7 @@ switch ($action){
             setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
             $_SESSION['message'] = '<p class="message">Thanks for registering '.$cl_firstname.'. Please use your email and password to login.</p>';
             $_SESSION['clientEmail'] = $cl_email;
-            header('location:accounts/index.php?action=login');
+            header('location:index.php?action=login');
             exit;  
         } else {
             $_SESSION['message'] = '<p class="message">Sorry '.$cl_firstname.', but the registration failed. Please try again.</p>';
