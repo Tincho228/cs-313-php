@@ -40,7 +40,7 @@
         </div>
         <div class="form-group">
             <label for="cellphone">Cell Phone</label>
-            <input type="number" class="form-control" id="cellphone" placeholder="Cell phone" required name="cl_phone">
+            <input type="text" class="form-control" id="cellphone" placeholder="Cell phone" required name="cl_phone">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
