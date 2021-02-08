@@ -53,9 +53,7 @@ switch ($action){
         // Hash the checked password
         $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
         // Send the data to the model*/
-        //$regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $_phone);
-        $cl_firstname = 'Martin';
-        $regOutcome = regClient($cl_firstname);
+        $regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $_phone);
         print_r($regOutcome);
         // Check and report the result
         if ($regOutcome === 1) {
