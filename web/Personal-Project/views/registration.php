@@ -22,17 +22,15 @@
         <h1 class="text-center text-light">Register now!</h1>
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required name="cl_firstname">
+            <input type="text" class="form-control" id="name"placeholder="Enter name" required name="cl_firstname">
         </div>
         <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter last name" required name="cl_lastname">
+            <input type="text" class="form-control" id="lastname"placeholder="Enter last name" required name="cl_lastname">
         </div>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required name="cl_email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                anyone else.</small>
+            <input type="email" class="form-control" id="email"placeholder="Enter email" required name="cl_email">
         </div>
         <div class="form-group">
             <label for="cellphone">Cell Phone</label>
