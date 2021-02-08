@@ -23,12 +23,19 @@ function herokuConnection(){
   }
 //This function will handle site registrations.
 
-function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_phone){
+//function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_phone){
+function regClient($book){    
     
     // Create a connection object using the phpmotors connection function
     $db = herokuConnection();
-    $rows = 1;
-    return $rows;
+    $sql = 'SELECT * FROM public.clients WHERE cl_name = :book';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+    $stmt->execute();
+    $info = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Close the database interaction
+    $stmt->closeCursor();
+    return $info;
     // The SQL statement
     /*$sql = 'INSERT INTO public.clients (cl_firstname, cl_lastname, cl_email, cl_password, cl_phone)
         VALUES (:cl_firstname, :cl_lastname, :cl_email, :cl_password, :cl_phone)';
