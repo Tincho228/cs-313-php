@@ -12,7 +12,7 @@ session_start();
 
 // Get the database connection file
 require_once '../library/connections.php';
-require_once '../library/functions.php';
+//require_once '../library/functions.php';
 require_once '../model/accounts-model.php';
 
 $action = filter_input(INPUT_POST, 'action');
