@@ -38,8 +38,6 @@
 
         <a href="../accounts/index.php?action=registration">Not a member yet?</a>
     </form>
-
-
 </main>
 
 <?php
