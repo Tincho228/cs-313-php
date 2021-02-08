@@ -16,6 +16,11 @@
     include "../common/header.php";
 ?>
 <main>
+<?php
+    //tag to show any messages that may need to be displayed
+    if (isset($_SESSION['message'])) {
+    echo $_SESSION['message'];
+    } ?>
     <form action="../accounts/index.php" method="post" class="login-form">
         <h1 class="text-center text-light">Log In</h1>
         <div class="form-group">
