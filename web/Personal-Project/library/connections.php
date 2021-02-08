@@ -1,6 +1,6 @@
 <?php
 // Function that connects to database
-function herokuConnection(){
+/*function herokuConnection(){
     try
     {
       $dbUrl = getenv('DATABASE_URL');
@@ -19,5 +19,5 @@ function herokuConnection(){
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-  }
+  }*/
 ?>
