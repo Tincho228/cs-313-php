@@ -12,7 +12,7 @@ session_start();
 
 // Get the database connection file
 require_once '../library/connections.php';
-//require_once '../library/functions.php';
+require_once '../library/functions.php';
 require_once '../model/accounts-model.php';
 
 $action = filter_input(INPUT_POST, 'action');
@@ -33,17 +33,17 @@ switch ($action){
         $cl_email = filter_input(INPUT_POST, 'cl_email', FILTER_SANITIZE_EMAIL);
         $cl_phone = filter_input(INPUT_POST, 'cl_phone', FILTER_SANITIZE_STRING);
         $cl_password = filter_input(INPUT_POST, 'cl_password', FILTER_SANITIZE_STRING);
-        /*// Validating Email and Password with custom functions/
-        $clientEmail = checkEmail($clientEmail);
-        $checkPassword = checkPassword($clientPassword);
+        
+        $cl_email = checkEmail($cl_email);
+        $checkPassword = checkPassword($cl_password);
         // Check for existing email 
-        $existingEmail = checkExistingEmail($clientEmail);
+        $existingEmail = checkExistingEmail($cl_email);
         // Check for existing email address in the table
         if($existingEmail){
-            $_SESSION['message'] = '<p class="message_error">That email address already exists. Do you want to login instead?</p>';
-            include '../view/login.php';
+            $_SESSION['message'] = '<p>That email address already exists. Do you want to login instead?</p>';
+            include '../view/registration.php';
             exit;
-        }*/
+        }
         // Check for missing data
         if (empty($cl_firstname) || empty($cl_lastname) || empty($cl_email) || empty($cl_password) || empty($cl_phone)) {
             $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
@@ -58,12 +58,12 @@ switch ($action){
         // Check and report the result
         if ($regOutcome === 1) {
             setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
-            $_SESSION['message'] = '<p class="message">Thanks for registering '.$cl_firstname.'. Please use your email and password to login.</p>';
+            $_SESSION['message'] = '<p>Thanks for registering '.$cl_firstname.'. Please use your email and password to login.</p>';
             $_SESSION['clientEmail'] = $cl_email;
             header('location:index.php?action=login');
             exit;  
         } else {
-            $_SESSION['message'] = '<p class="message">Sorry '.$cl_firstname.', but the registration failed. Please try again.</p>';
+            $_SESSION['message'] = '<p>Sorry '.$cl_firstname.', but the registration failed. Please try again.</p>';
             include '../view/registration.php';
             exit;
         }

@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Template</title>
+    <title>Log In</title>
 </head>
 <?php
     include "../common/header.php";
 ?>
 <main>
-<?php
+    <div class="container-sm">
+    <?php
     //tag to show any messages that may need to be displayed
     if (isset($_SESSION['message'])) {
     echo $_SESSION['message'];
@@ -25,21 +26,21 @@
         <h1 class="text-center text-light">Log In</h1>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required name="cl_email" <?php if(isset($cl_email)){echo "value='$cl_email'";}  ?>>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type="email" class="form-control" id="email" required name="cl_email" <?php if(isset($cl_email)){echo "value='$cl_email'";}?>>
+            
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
         </div>
-        <button type="submit" class="btn btn-primary" value="Login">Send message</button>
+        <button type="submit" class="btn btn-primary" value="Login">Log In</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="Login">
 
         <a href="../accounts/index.php?action=registration">Not a member yet?</a>
     </form>
+    </div>
 </main>
-
 <?php
     include "../common/footer.php";
 ?>
