@@ -40,7 +40,7 @@ switch ($action){
         $existingEmail = checkExistingEmail($cl_email);
         // Check for existing email address in the table
         
-        if($existingEmail === 0){
+        if($existingEmail){
             $_SESSION['message'] = '<p>That email address already exists. Do you want to login instead?</p>';
             include '../views/registration.php';
             exit;
