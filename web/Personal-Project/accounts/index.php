@@ -83,7 +83,7 @@ switch ($action){
         $checkPassword = checkPassword($cl_password);
 
         // Check for missing data
-        if (empty($clientEmail) || empty($checkPassword)) {
+        if (empty($cl_email) || empty($checkPassword)) {
             $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
             include '../views/login.php';
             exit;
