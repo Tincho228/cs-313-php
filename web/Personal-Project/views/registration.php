@@ -27,20 +27,20 @@
     <form action="../accounts/index.php" method="post" class="login-form">
         <h1 class="text-center text-light">Register now!</h1>
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name"placeholder="Enter name" required name="cl_firstname">
+            <label for="name">First Name</label>
+            <input type="text" class="form-control" id="name"placeholder="Enter name" required name="cl_firstname" <?php if(isset($cl_firstname)){echo "value='$cl_firstname'";}  ?>>
         </div>
         <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input type="text" class="form-control" id="lastname"placeholder="Enter last name" required name="cl_lastname">
+            <input type="text" class="form-control" id="lastname"placeholder="Enter last name" required name="cl_lastname" <?php if(isset($cl_lastname)){echo "value='$cl_lastname'";}  ?>>
         </div>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email"placeholder="Enter email" required name="cl_email">
+            <input type="email" class="form-control" id="email"placeholder="Enter email" required name="cl_email" <?php if(isset($cl_email)){echo "value='$cl_email'";}  ?>>
         </div>
         <div class="form-group">
             <label for="cellphone">Cell Phone</label>
-            <input type="text" class="form-control" id="cellphone" placeholder="Cell phone" required name="cl_phone">
+            <input type="text" class="form-control" id="cellphone" placeholder="Cell phone" required name="cl_phone" <?php if(isset($cl_phone)){echo "value='$cl_phone'";}  ?>>
         </div>
         <div class="form-group">
             <label for="password">Password</label>

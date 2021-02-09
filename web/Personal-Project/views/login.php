@@ -25,7 +25,7 @@
         <h1 class="text-center text-light">Log In</h1>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required name="cl_email">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required name="cl_email" <?php if(isset($cl_email)){echo "value='$cl_email'";}  ?>>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
