@@ -92,8 +92,8 @@ switch ($action){
         // A valid password exists, proceed with the login process
         // Query the client data based on the email address
         $clientData = getClient($cl_email);
-        print_r($clientData);
-        /*
+        
+        
         // Compare the password just submitted against
         // the hashed password for the matching client if email exists.
         if(!$existingEmail){
@@ -102,6 +102,8 @@ switch ($action){
                 exit;
             }
             else {
+                echo $cl_password;
+                echo $clientData['cl_password'];
                 $hashCheck = password_verify($cl_password, $clientData['cl_password']);
             }
         // If the hashes don't match create an error
