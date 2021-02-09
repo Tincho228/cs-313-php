@@ -126,7 +126,7 @@ switch ($action){
         print_r($_SESSION['clientData']);
         //include "../phpmotors/views/admin.php";
         exit;
-        }*/
+        }
         break;
     
     default:
