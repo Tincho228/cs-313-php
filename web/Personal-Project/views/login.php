@@ -17,17 +17,17 @@
 ?>
 <main>
     <div class="container">
-    <?php
-    //tag to show any messages that may need to be displayed
-    if (isset($_SESSION['message'])) {
-    echo $_SESSION['message'];
-    } ?>
+    
     <form action="../accounts/index.php" method="post" class="login-form">
-        <h1 class="text-center text-light">Log In</h1>
+        <h1 class="text-center">Log In</h1>
+        <?php
+        //tag to show any messages that may need to be displayed
+        if (isset($_SESSION['message'])) {
+        echo $_SESSION['message'];
+        } ?>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" required name="cl_email" <?php if(isset($cl_email)){echo "value='$cl_email'";}?>>
-            
+            <input type="email" class="form-control" id="email" required name="cl_email" value = "<?php if(isset($_SESSION['cl_email'])){echo $_SESSION['cl_email'];} ?>">>
         </div>
         <div class="form-group">
             <label for="password">Password</label>

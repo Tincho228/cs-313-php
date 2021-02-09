@@ -18,14 +18,15 @@
 <main>
 <div class="container">
             
-    <?php
-    //tag to show any messages that may need to be displayed
-    if (isset($_SESSION['message'])) {
-    echo $_SESSION['message'];
-    } ?>
+
 
     <form action="../accounts/index.php" method="post" class="login-form">
-        <h1 class="text-center text-light">Register now!</h1>
+        <h1 class="text-center">Register form</h1>
+        <?php
+        //tag to show any messages that may need to be displayed
+        if (isset($_SESSION['message'])) {
+        echo $_SESSION['message'];
+        } ?>
         <div class="form-group">
             <label for="name">First Name</label>
             <input type="text" class="form-control" id="name" required name="cl_firstname" <?php if(isset($cl_firstname)){echo "value='$cl_firstname'";}  ?>>

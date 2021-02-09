@@ -60,7 +60,7 @@ switch ($action){
         if ($regOutcome === 1) {
             setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
             $_SESSION['message'] = '<p>Thanks for registering '.$cl_firstname.'. Please use your email and password to login.</p>';
-            $_SESSION['clientEmail'] = $cl_email;
+            $_SESSION['cl_email'] = $cl_email;
             header('location:index.php?action=login');
             exit;  
         } else {
