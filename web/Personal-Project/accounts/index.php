@@ -50,11 +50,11 @@ switch ($action){
             $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
             include '../views/registration.php';
             exit;
-        }/*
+        }
         // Hash the checked password
-        $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
-        // Send the data to the model*/
-        $regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_phone);
+        $hashedPassword = password_hash($cl_password, PASSWORD_DEFAULT);
+        // Send the data to the model
+        $regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $hashedPassword, $cl_phone);
     
         // Check and report the result
         if ($regOutcome === 1) {

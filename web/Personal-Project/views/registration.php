@@ -16,7 +16,7 @@
     include "../common/header.php";
 ?>
 <main>
-<div class="container-sm">
+<div class="container">
             
     <?php
     //tag to show any messages that may need to be displayed
