@@ -26,7 +26,7 @@ function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_pho
     return $rowsChanged;
    }
 
-   function checkExistingEmail($cl_email) {
+function checkExistingEmail($cl_email) {
     // Create a connection object using the phpmotors connection function
     $db =  herokuConnection();
     // The SQL statement
@@ -50,5 +50,26 @@ function regClient($cl_firstname, $cl_lastname, $cl_email, $cl_password, $cl_pho
     } else {
          return 1;
     }
+   }   
+
+// Get client data based on an email address
+function getClient($cl_email){
+    // Create a connection object using the phpmotors connection function
+    $db = herokuConnection();
+    // The SQL statement
+    $sql = 'SELECT cl_id, cl_firstname, cl_lastname, cl_email, cl_level, cl_password, cl_phone FROM public.clients WHERE cl_email = :cl_email';
+    // Create the prepared statement using the phpmotors connection
+    $stmt = $db->prepare($sql);
+    // The next four lines replace the placeholders in the SQL
+    // statement with the actual values in the variables
+    // and tells the database the type of data it is
+    $stmt->bindValue(':cl_email', $cl_email, PDO::PARAM_STR);
+    // Insert the data
+    $stmt->execute();
+    // We expect a single record to be returned, thus the use of the fetch() method.
+    $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Close the database interaction
+    $stmt->closeCursor();
+    return $clientData;
    }   
 ?>

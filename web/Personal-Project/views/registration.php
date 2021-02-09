@@ -17,10 +17,7 @@
 ?>
 <main>
 <div class="container">
-            
-
-
-    <form action="../accounts/index.php" method="post" class="login-form">
+    <form action="../accounts/index.php" method="post" class="register-form">
         <h1 class="text-center">Register form</h1>
         <?php
         //tag to show any messages that may need to be displayed
@@ -47,7 +44,7 @@
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
         </div>
-        <button type="submit" class="btn btn-primary" value="Login">Send message</button>
+        <button type="submit" class="btn btn-primary" value="Login">Register</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="register">
     </form>

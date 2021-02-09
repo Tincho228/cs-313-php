@@ -19,7 +19,7 @@
     <div class="container">
     
     <form action="../accounts/index.php" method="post" class="login-form">
-        <h1 class="text-center">Log In</h1>
+        <h1>Log In</h1>
         <?php
         //tag to show any messages that may need to be displayed
         if (isset($_SESSION['message'])) {
@@ -27,17 +27,16 @@
         } ?>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" required name="cl_email" value = "<?php if(isset($_SESSION['cl_email'])){echo $_SESSION['cl_email'];} ?>">>
+            <input type="email" class="form-control" id="email" required name="cl_email" value = "<?php if(isset($_SESSION['cl_email'])){echo $_SESSION['cl_email'];} ?>">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
         </div>
-        <button type="submit" class="btn btn-primary" value="Login">Log In</button>
+        <button type="submit" class="btn btn-dark" value="Login">Log In</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="Login">
-
-        <a href="../accounts/index.php?action=registration">Not a member yet?</a>
+        <a class="link-form" href="../accounts/index.php?action=registration">Not a member yet?</a>
     </form>
     </div>
 </main>
