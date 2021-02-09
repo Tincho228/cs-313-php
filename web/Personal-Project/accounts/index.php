@@ -78,6 +78,7 @@ switch ($action){
         $existingEmail = checkExistingEmail($cl_email);
         // Validating email
         $cl_email = checkEmail($cl_email);
+        
         $cl_password = filter_input(INPUT_POST, 'cl_password', FILTER_SANITIZE_STRING);
         //Validating password
         $checkPassword = checkPassword($cl_password);
@@ -91,6 +92,8 @@ switch ($action){
         // A valid password exists, proceed with the login process
         // Query the client data based on the email address
         $clientData = getClient($cl_email);
+        print_r($clientData);
+        /*
         // Compare the password just submitted against
         // the hashed password for the matching client if email exists.
         if(!$existingEmail){
@@ -121,7 +124,7 @@ switch ($action){
         print_r($_SESSION['clientData']);
         //include "../phpmotors/views/admin.php";
         exit;
-        }
+        }*/
         break;
     
     default:
