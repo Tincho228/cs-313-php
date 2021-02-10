@@ -167,7 +167,7 @@ switch ($action){
                                 array_pop($clientData);
                                 $_SESSION['clientData'] = $clientData;
                                 // Send them to the admin view
-                                header('location: /phpmotors/accounts/index.php');
+                                header('location:index.php');
                                 exit;
                         } else {
                         $_SESSION['message'] = '<p>Sorry, your Account could not be updated.</p>';
@@ -187,7 +187,7 @@ switch ($action){
                  array_pop($clientData);
                  $_SESSION['clientData'] = $clientData;
                  // Send them to the admin view
-                 header('location: /phpmotors/accounts/index.php');
+                 header('location:index.php');
                  exit;
                  } else {
                  $_SESSION['message'] = '<p>Sorry, your Account could not be updated.</p>';
