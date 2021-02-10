@@ -131,7 +131,7 @@ switch ($action){
         header('location:$_SERVER["DOCUMENT_ROOT"]."/Personal-Project/index.php');
         break;
     default:
-        require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/index.php";
+        header('location:$_SERVER["DOCUMENT_ROOT"]."/Personal-Project/index.php');
         break;
  }
  ?>
