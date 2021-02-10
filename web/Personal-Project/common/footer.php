@@ -13,9 +13,9 @@
                             <p class="text-light">252 - 3625 - 3625</p>
                             <h4 class="text-light">Social Media</h4>
                             <div class="row text-light">
-                                <a href="" class="text-light social-icon"><img src="../images/facebook_orange.png" alt="facebook icon"> </a>
-                                <a href="" class="text-light social-icon"><img src="../images/telegram_orange.png" alt="telegram icon"> </a>
-                                <a href="" class="text-light social-icon"><img src="../images/whatsapp_orange.png" alt="whatsapp icon"> </a>
+                                <a href="" class="text-light social-icon"><img src="https://powerful-sierra-77608.herokuapp.com/Personal-Project/images/facebook_orange.png" alt="facebook icon"> </a>
+                                <a href="" class="text-light social-icon"><img src="https://powerful-sierra-77608.herokuapp.com/Personal-Project/images/telegram_orange.png" alt="telegram icon"> </a>
+                                <a href="" class="text-light social-icon"><img src="https://powerful-sierra-77608.herokuapp.com/Personal-Project/images/whatsapp_orange.png" alt="whatsapp icon"> </a>
                             </div>
                         </div>
                         <div class="col">
