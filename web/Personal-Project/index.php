@@ -31,7 +31,7 @@ switch ($action){
     break;
      
     default:
-     include "views/home.php";
+    require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/views/home.php";
      break;
  }
  ?>
