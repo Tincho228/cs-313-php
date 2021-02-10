@@ -128,10 +128,10 @@ switch ($action){
         break;
     case 'Logout':
         session_destroy();
-        header('location:index.php');
+        header('location:../index.php');
         break;
     default:
-        include "../views/home.php";
+        require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/views/home.php";
         break;
  }
  ?>
