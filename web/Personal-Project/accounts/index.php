@@ -108,8 +108,6 @@ switch ($action){
         // and return to the login view
         if (!$hashCheck) {
                 $_SESSION['message'] = '<p>Please check your password and try again.</p>';
-                echo $cl_password;
-                echo $clientData['cl_password'];
                 include '../views/login.php';
                 exit;
         }else {
@@ -123,8 +121,8 @@ switch ($action){
         $_SESSION['clientData'] = $clientData;
         
         // Send them to the admin view
-        print_r($_SESSION['clientData']);
-        //include "../phpmotors/views/admin.php";
+        $_SESSION['message'] = '<p>You are logged In.</p>';
+        include "../phpmotors/views/login.php";
         exit;
         }
         break;
