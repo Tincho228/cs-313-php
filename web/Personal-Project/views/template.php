@@ -13,10 +13,10 @@
     <title>Template</title>
 </head>
 <?php
-    include "common/header.php";
+    include "https://dashboard.heroku.com/apps/powerful-sierra-77608/Personal-Project/common/header.php";
 ?>
 <?php
-    include "common/footer.php";
+    include "https://dashboard.heroku.com/apps/powerful-sierra-77608/Personal-Project/common/footer.php";
 ?>
 <body>
     <div class="wrapper-body">

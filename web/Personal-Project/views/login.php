@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://dashboard.heroku.com/apps/powerful-sierra-77608/personal-project/styles.css"> <!-- /week2/Personal-project/week2-styles.css -->
+    <link rel="stylesheet" href="https://dashboard.heroku.com/apps/powerful-sierra-77608/Personal-Project/styles.css"> <!-- /week2/Personal-project/week2-styles.css -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
@@ -13,7 +13,7 @@
     <title>Log In</title>
 </head>
 <?php
-    include "../common/header.php";
+    include "https://dashboard.heroku.com/apps/powerful-sierra-77608/Personal-Project/common/header.php";
 ?>
 <main>
     <div class="container">
@@ -41,7 +41,7 @@
     </div>
 </main>
 <?php
-    include "../common/footer.php";
+    include "https://dashboard.heroku.com/apps/powerful-sierra-77608/Personal-Project/common/footer.php";
 ?>
 <body>
     <div class="wrapper-body">
