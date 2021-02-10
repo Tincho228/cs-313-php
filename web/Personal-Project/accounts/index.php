@@ -58,7 +58,7 @@ switch ($action){
     
         // Check and report the result
         if ($regOutcome === 1) {
-            setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
+            setcookie('firstname', $cl_firstname, strtotime('+1 year'), '/');
             $_SESSION['message'] = '<p>Thanks for registering '.$cl_firstname.'. Please use your email and password to login.</p>';
             $_SESSION['cl_email'] = $cl_email;
             header('location:index.php?action=login');
@@ -122,7 +122,7 @@ switch ($action){
         
         // Send them to the admin view
         $_SESSION['message'] = '<p>You are logged In.</p>';
-        include "../phpmotors/views/login.php";
+        include "../views/login.php";
         exit;
         }
         break;

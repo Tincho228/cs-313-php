@@ -13,7 +13,7 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Products</a>
@@ -27,8 +27,34 @@
                             </ul>
                         </div>
                         
+
+                        <?php 
+        
+                            if(isset($_SESSION['loggedin'])){
+                                // Delete cookie based welcome message if loggedin
+                                if(isset($_COOKIE['firstname'])){
+                                    setcookie('firstname', "", strtotime('-1 year'), '/');
+                                }
+                                // Set Session based welcome message link if loggedin
+                                echo "<a class='nav-link text-light' href='#' title='Click to register or login'><span>Welcome ". $_SESSION['clientData']['cl_firstname']."</span></a>";
+                            }else if(isset($_COOKIE['firstname'])){
+                                // If not loggedin
+                                $_SESSION['cookieFirstname'] = filter_input(INPUT_COOKIE, 'firstname', FILTER_SANITIZE_STRING);
+                                echo "<span class='nav-link text-light'>Succesfully registered, ".$_SESSION['cookieFirstname']."</span>";
+                            }
+
+                        ?>
+                        <?php
+                            // if is not logged in show My Account
+                            if(!isset($_SESSION['loggedin'])){
+                                echo '<a class="nav-link text-light" href="accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
+                            } elseif($_SESSION['loggedin']){
+                                echo '<a class="nav-link text-light" href="accounts/index.php?action=Logout" title="logout"><i class="fa fa-user" aria-hidden="true"></i> Logout </a>';
+                            } else {
+                                echo '<a class="nav-link text-light" href="accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
+                                }
+                            ?>
                         
-                        <a class="nav-link text-light" href="accounts/index.php?action=login" title="Click to register or login"><i class="fa fa-user" aria-hidden="true"></i> Log In </a>;
                                            
                         
                     
