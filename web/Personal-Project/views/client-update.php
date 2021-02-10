@@ -28,19 +28,19 @@
         } ?>
         <div class="form-group">
             <label for="name">First Name</label>
-            <input type="text" class="form-control" id="name" required name="cl_firstname" <?php if(isset($cl_firstname)){echo "value='$cl_firstname'";}  ?>>
+            <input type="text" class="form-control" id="name" required name="cl_firstname" value = <?php if(isset($_SESSION['clientData']['cl_firstname'])){echo $_SESSION['clientData']['cl_firstname'];}?>>
         </div>
         <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input type="text" class="form-control" id="lastname" required name="cl_lastname" <?php if(isset($cl_lastname)){echo "value='$cl_lastname'";}  ?>>
+            <input type="text" class="form-control" id="lastname" required name="cl_lastname" value = <?php if(isset($_SESSION['clientData']['cl_lastname'])){echo $_SESSION['clientData']['cl_lastname'];}?>>
         </div>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" required name="cl_email" <?php if(isset($cl_email)){echo "value='$cl_email'";}  ?>>
+            <input type="email" class="form-control" id="email" required name="cl_email" value = <?php if(isset($_SESSION['clientData']['cl_email'])){echo $_SESSION['clientData']['cl_email'];}?>>
         </div>
         <div class="form-group">
             <label for="cellphone">Cell Phone</label>
-            <input type="text" class="form-control" id="cellphone" required name="cl_phone" <?php if(isset($cl_phone)){echo "value='$cl_phone'";}  ?>>
+            <input type="text" class="form-control" id="cellphone" required name="cl_phone" value = <?php if(isset($_SESSION['clientData']['cl_phone'])){echo $_SESSION['clientData']['cl_phone'];}?>>
         </div>
 
         <button type="submit" class="btn btn-primary" value="Login">Modify</button>
