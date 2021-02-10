@@ -122,7 +122,7 @@ switch ($action){
         
         // Send them to the admin view
         $_SESSION['message'] = '<p>You are logged In.</p>';
-        include "../views/login.php";
+        include "../views/admin.php";
         exit;
         }
         break;
@@ -144,7 +144,7 @@ switch ($action){
         // Check for existing email 
         $existingEmail = checkExistingEmail($cl_email);
         // Check for missing data
-        if (empty($cl_firstname) || empty($cl_lastname) || empty($cl_email) || empty($cl_password) || empty($cl_phone)) {
+        if (empty($cl_firstname) || empty($cl_lastname) || empty($cl_email) || empty($cl_phone)) {
             $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
             include '../views/client-update.php';
             exit;
