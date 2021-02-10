@@ -126,7 +126,10 @@ switch ($action){
         exit;
         }
         break;
-    
+    case 'Logout':
+        session_destroy();
+        header('location:index.php');
+        break;
     default:
         include "../views/home.php";
         break;
