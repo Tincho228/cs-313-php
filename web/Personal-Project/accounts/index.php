@@ -130,8 +130,115 @@ switch ($action){
         session_destroy();
         header('location:../index.php');
         break;
+    case 'updateClient':
+        include '../views/client-update.php';
+        break;
+    case 'modifyAccount':
+        $cl_firstname = filter_input(INPUT_POST, 'cl_firstname', FILTER_SANITIZE_STRING);
+        $cl_lastname = filter_input(INPUT_POST, 'cl_lastname', FILTER_SANITIZE_STRING);
+        $cl_email = filter_input(INPUT_POST, 'cl_email', FILTER_SANITIZE_EMAIL);
+        $cl_id = filter_input(INPUT_POST, 'cl_id', FILTER_SANITIZE_NUMBER_INT);
+        $cl_phone = filter_input(INPUT_POST, 'cl_phone', FILTER_SANITIZE_STRING);
+        // Validating Email and Password with custom functions
+        $cl_email = checkEmail($cl_email);
+        // Check for existing email 
+        $existingEmail = checkExistingEmail($cl_email);
+        // Check for missing data
+        if (empty($cl_firstname) || empty($cl_lastname) || empty($cl_email) || empty($cl_password) || empty($cl_phone)) {
+            $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
+            include '../views/client-update.php';
+            exit;
+        }
+        // Check if the new email is available
+        if($_SESSION['clientData']['cl_email'] != $cl_email) {
+                if($existingEmail){
+                    $_SESSION['message'] = '<p>Sorry, ' .$cl_email. ' is not available. Try again</p>';
+                    include '../views/client-update.php';  
+                    exit;
+                }else {
+                        // Send the data to the model
+                        $updateResult = updateAccount($cl_id, $cl_firstname, $cl_lastname, $cl_email, $cl_phone);
+                        // Check and report the result
+                        if ($updateResult) {
+                                $_SESSION['message'] = "<p>Congratulations, your Account was successfully updated.</p>";
+                                $clientData = getClientModified($cl_id);
+                                // A valid user exists, log them in
+                                $_SESSION['loggedin'] = TRUE;
+                                array_pop($clientData);
+                                $_SESSION['clientData'] = $clientData;
+                                // Send them to the admin view
+                                header('location: /phpmotors/accounts/index.php');
+                                exit;
+                        } else {
+                        $_SESSION['message'] = '<p>Sorry, your Account could not be updated.</p>';
+                        include "../views/client-update.php";
+                        exit;
+                        }           
+                        }
+        } else {
+                 // Send the data to the model
+                 $updateResult = updateAccount($cl_id, $cl_firstname, $cl_lastname, $cl_email, $cl_phone);
+                 // Check and report the result
+                 if ($updateResult) {
+                 $_SESSION['message'] = "<p>Congratulations, your Account was successfully updated.</p>";
+                 $clientData = getClientModified($cl_id);
+                 // A valid user exists, log them in
+                 $_SESSION['loggedin'] = TRUE;
+                 array_pop($clientData);
+                 $_SESSION['clientData'] = $clientData;
+                 // Send them to the admin view
+                 header('location: /phpmotors/accounts/index.php');
+                 exit;
+                 } else {
+                 $_SESSION['message'] = '<p>Sorry, your Account could not be updated.</p>';
+                 include "../view/client-update.php";
+                 exit;
+                 }           
+            }
+            break;
+    case 'updatePassword':/*
+            $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
+            $clientId = filter_input(INPUT_POST, 'clientId', FILTER_SANITIZE_NUMBER_INT);
+            //Validating password
+            $checkPassword = checkPassword($clientPassword);
+            $clientData = getClientModified($clientId);
+            // Check for missing data
+            if (empty($clientId) || empty($checkPassword)) {
+                $_SESSION['message'] = '<p class="message_error">Please provide information for all empty form fields.</p>';
+                require $_SERVER["DOCUMENT_ROOT"]."/phpmotors/view/client-update.php";
+                exit;
+            }
+            // Hash the checked password
+            $hashCheck = password_verify($clientPassword, $clientData['clientPassword']);
+            // If the hashes match create an error
+            // and return to the login view
+            if ($hashCheck) {
+                $_SESSION['message'] = '<p class="message_error">Notice: It cannot be the same password</p>';
+                require $_SERVER["DOCUMENT_ROOT"]."/phpmotors/view/client-update.php";
+                exit;
+            }
+            // Store the array into the session
+            array_pop($clientData);
+            $_SESSION['clientData'] = $clientData;
+    
+            $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
+            // Send the data to the model
+            $updateResult = updatePassword($hashedPassword, $clientId);
+            // Clear the password from dataClient and store it into the SESSION
+            
+            // Check and report the result
+            if ($updateResult === 1) {
+                $_SESSION['message'] = '<p class="message_error">Congratulations! Your password has been updated.</p>';
+                header('location: /phpmotors/accounts/index.php');
+                exit;  
+            } else {
+                $_SESSION['message'] = '<p class="message_error">Sorry, your Password could not be changed. Please try again.</p>';
+                require $_SERVER["DOCUMENT_ROOT"]."/phpmotors/view/client-update.php";
+                exit;
+            }*/
+            break;
     default:
-        header('location:../index.php');
+        include "../views/admin.php";
         break;
  }
  ?>

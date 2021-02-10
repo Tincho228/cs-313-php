@@ -5,13 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../styles.css"> <!-- /week2/Personal-project/week2-styles.css -->
+    <link rel="stylesheet" href="styles.css"> <!-- /week2/Personal-project/week2-styles.css -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Registration</title>
+    <title>Template</title>
 </head>
+
+<body>
 <?php
     include "../common/header.php";
 ?>
@@ -40,31 +42,25 @@
             <label for="cellphone">Cell Phone</label>
             <input type="text" class="form-control" id="cellphone" required name="cl_phone" <?php if(isset($cl_phone)){echo "value='$cl_phone'";}  ?>>
         </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-            <span>At least 8 characters and has at least 1 uppercase character, 1 number and 1 special character.</span>
-        </div>
-        <button type="submit" class="btn btn-primary" value="Login">Register</button>
-        <!-- Add the action name - value pair -->
-        <input type="hidden" name="action" value="register">
-    </form>
-    </div>
-</main>
 
+        <button type="submit" class="btn btn-primary" value="Login">Modify</button>
+        <!-- Add the action name - value pair -->
+        <input type="hidden" name="action" value="modifyAccount">
+        <input type="hidden" name="cl_id" value="<?php if(isset($_SESSION['clientData']['cl_id'])){ echo $_SESSION['clientData']['cl_id'];} ?>">
+    </form>
+
+</div>
+
+</main>
 <?php
     include "../common/footer.php";
-?>
-<body>
-    <div class="wrapper-body">
-       
-       
+?>         
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </div>
+    
 </body>
 
 </html>

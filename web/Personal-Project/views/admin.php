@@ -10,11 +10,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Template</title>
+    <title>My account</title>
 </head>
 <?php
     include "../common/header.php";
 ?>
+<main>
+    <div class="container">
+        <h1>You are logged in</h1>
+        <h3>My account Details</h3>
+        <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/index.php?action=updateClient"><i class="fa fa-pencil-square" aria-hidden="true"></i>Modify account</a> 
+        <hr>
+        <h3>My reviews</h3>
+        <hr>
+        <h3>Membership Details</h3>
+        <hr>
+    </div>
+</main>
 <?php
     include "../common/footer.php";
 ?>

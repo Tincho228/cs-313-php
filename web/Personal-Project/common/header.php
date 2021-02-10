@@ -13,7 +13,7 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="Personal-Project/index.php">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Products</a>
