@@ -13,10 +13,10 @@
     <title>Template</title>
 </head>
 <?php
-    include "/Personal-Project/common/header.php";
+    include "/common/header.php";
 ?>
 <?php
-    include "/Personal-Project/common/footer.php";
+    include "/common/footer.php";
 ?>
 <body>
     <div class="wrapper-body">

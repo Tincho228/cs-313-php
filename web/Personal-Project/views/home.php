@@ -359,7 +359,7 @@
             </section>
         </main>
         <?php
-            include "https://dashboard.heroku.com/apps/powerful-sierra-77608/Personal-Project/common/footer.php";
+            include "/common/footer.php";
         ?>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
