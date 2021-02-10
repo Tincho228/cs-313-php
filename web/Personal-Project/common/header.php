@@ -47,11 +47,11 @@
                         <?php
                             // if is not logged in show My Account
                             if(!isset($_SESSION['loggedin'])){
-                                echo '<a class="nav-link text-light" href="accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
+                                echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
                             } elseif($_SESSION['loggedin']){
-                                echo '<a class="nav-link text-light" href="accounts/index.php?action=Logout" title="logout"><i class="fa fa-user" aria-hidden="true"></i> Logout </a>';
+                                echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=Logout" title="logout"><i class="fa fa-user" aria-hidden="true"></i> Logout </a>';
                             } else {
-                                echo '<a class="nav-link text-light" href="accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
+                                echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
                                 }
                             ?>
                         
