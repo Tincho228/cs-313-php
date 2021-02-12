@@ -37,7 +37,7 @@ function buildProductList($product_data){
              </tr>";
     
     }
-    $list .= "</tbody>";
+    $list .= "</tbody></table>";
 
     return $list;
 }

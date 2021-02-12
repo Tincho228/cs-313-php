@@ -17,16 +17,12 @@
     include "../common/header.php";
 ?>
 <main>
-
-
     <div class="container">
         <?php
         if (isset($product_list)) {
         echo $product_list;
         } ?>
     </div>
-
-
 </main>
 <?php
     include "../common/footer.php";
