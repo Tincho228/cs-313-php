@@ -30,8 +30,8 @@ switch ($action){
     break;
      
     default:
-    $product_data = getProductList();
-    $product_cards = buildCarProducts($product_data);
+    /*$product_data = getProductList();
+    $product_cards = buildCarProducts($product_data);*/
     require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/views/home.php";
      break;
  }

@@ -27,7 +27,7 @@
                         <h2 class="text-center section-padding">Get 20% off adding your package to the cart</h2>
                     </div>
                 </div>
-            <!--    <div class="container bg-light">
+                <div class="container bg-light">
                     <div class="row justify-content-around section-padding">
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="images/yoga.jpg" alt="Yoga Card image Cap">
@@ -94,13 +94,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>-->
-                        <?php
-                        if (isset($product_cards)){
-                            echo $product_cards;
-                        }
-
-                        ?>
+                        </div>
+                        
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="images/weight.jpg" alt="Weight card image Cap">
                             <div class="card-body bg-dark">
