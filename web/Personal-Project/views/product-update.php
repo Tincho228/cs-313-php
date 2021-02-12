@@ -31,11 +31,11 @@
         </div>
         <div class="form-group">
             <label for="price">Product price</label>
-            <input type="number" class="form-control" id="price" required name="pr_price" value = <?php if(isset($product_detail['pr_price'])){echo "$ ".$product_detail['pr_price'];}?> >
+            <input type="number" class="form-control" id="price" required name="pr_price" value = <?php if(isset($product_detail['pr_price'])){echo $product_detail['pr_price'];}?> >
         </div>
         <div class="form-group">
             <label for="comment">Make a comment</label>
-            <textarea name="pr_comment" class="form-control" id="comment" cols="30" rows="5"><?php if(isset($product_detail['pr_name'])){echo $product_detail['pr_name'];}?></textarea>
+            <textarea name="pr_comment" class="form-control" id="comment" cols="30" rows="5"><?php if(isset($product_detail['pr_name'])){echo $product_detail['pr_comment'];}?></textarea>
         </div>
         <button type="submit" class="btn btn-dark" value="Add product">Add product</button>
         <!-- Add the action name - value pair -->
