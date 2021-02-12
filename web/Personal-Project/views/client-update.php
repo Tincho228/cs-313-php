@@ -43,7 +43,7 @@
             <input type="text" class="form-control" id="cellphone" required name="cl_phone" value = <?php if(isset($_SESSION['clientData']['cl_phone'])){echo $_SESSION['clientData']['cl_phone'];}?>>
         </div>
 
-        <button type="submit" class="btn btn-primary" value="Modify Account">Modify</button>
+        <button type="submit" class="btn btn-primary" value="Modify account">Update account</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="modifyAccount">
         <input type="hidden" name="cl_id" value="<?php if(isset($_SESSION['clientData']['cl_id'])){ echo $_SESSION['clientData']['cl_id'];} ?>">
@@ -60,7 +60,7 @@
             <input type="password" class="form-control" id="password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
             <span>At least 8 characters and has at least 1 uppercase character, 1 number and 1 special character.</span>
         </div>
-        <button type="submit" class="btn btn-dark" value="Modify Password">Modify Password</button>
+        <button type="submit" class="btn btn-dark" value="Update password">Update password</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="updatePassword">
         <input type="hidden" name="cl_id" value="<?php if(isset($_SESSION['clientData']['cl_id'])){ echo $_SESSION['clientData']['cl_id'];} ?>">

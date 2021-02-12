@@ -22,6 +22,7 @@
         if (isset($product_list)) {
         echo $product_list;
         } ?>
+        <a class="btn btn-dark" href="http://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=addProduct"><i class="fa fa-plus" aria-hidden="true"></i> Add product</a> 
     </div>
 </main>
 <?php
