@@ -45,7 +45,6 @@ function buildProductList($product_data){
 
 // Build the list card products for the home section
 function buildCarProducts($product_data){
-<<<<<<< HEAD
     $card = "<ul>";
     foreach($product_data as $product){
         $card.= "<li>".$product['pr_name']."</li>
@@ -53,8 +52,6 @@ function buildCarProducts($product_data){
                  <li>".$product['pr_comment']."</li>";       
     }
     /*
-=======
->>>>>>> 991bba5966cc9a554d2ea8ced80f2e354c2739ad
     $card = "<div class='container bg-light'>
     <div class='row justify-content-around section-padding'>";
 
@@ -115,12 +112,8 @@ function buildCarProducts($product_data){
             </div>";
         
     }
-<<<<<<< HEAD
     $card .= "</div>";*/
     $card.="</ul>";
-=======
-    $card .= "</div>";
->>>>>>> 991bba5966cc9a554d2ea8ced80f2e354c2739ad
     return $card;
 }
 ?>
