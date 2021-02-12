@@ -43,5 +43,3 @@ function buildProductList($product_data){
 }
 
 ?>
-
-<a href='/phpmotors/vehicles/?action=vehicle-detail&invId=".urlencode($vehicle['invId'])."'>
