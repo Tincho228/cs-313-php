@@ -13,6 +13,7 @@ function checkPassword($cl_password){
     return preg_match($pattern, $cl_password);
    }
 
+// build the list of products available for the administrator
 function buildProductList($product_data){
     $list = "<h2>My product list</h2>
              <table class='table'>";
@@ -42,4 +43,69 @@ function buildProductList($product_data){
     return $list;
 }
 
+// Build the list card products for the home section
+function buildCarProducts($product_data){
+    $card = "<div class='container bg-light'>
+    <div class='row justify-content-around section-padding'>";
+
+    foreach($product_data as $product){
+    $card.= "<div class='card' style='width: 18rem;'>
+                <img class='card-img-top' src='images/yoga.jpg' alt='".$product['pr_name']." Card image Cap'>
+            <div class='card-body bg-dark'>
+                <h5 class='card-title text-light'>".$product['pr_name']."</h5>
+                <p class='card-text text-light'>".$product['pr_comment']."</p>
+                <!-- Button trigger modal -->
+                <button type='button' class='btn btn-danger' data-toggle='modal' data-target='#yoga-card'>Begin now!</button>
+                <!-- Modal -->
+                <div class='modal fade' id='yoga-card' tabindex='-1' role='dialog'
+                    aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                    <div class='col-md-6 modal-card modal-dialog' role='document'>
+                        <div class='modal-content'>
+                            <div class='modal-header bg-dark'>
+                                <img class='navbar-logo' src='images/logo.png' alt='navbar logo'>
+                                <h5 class='modal-title text-warning' id='exampleModalLabel'>MAFUBA</h5>
+                                <button type='button' class='close' data-dismiss='modal'
+                                    aria-label='Close'>
+                                    <span aria-hidden='true'>&times;</span>
+                                </button>
+                            </div>
+                            <div class='modal-body'>
+                                <div class='row'>
+                                    <div class='col-md-5 col-sm-12'>
+                                        <div class='card' style='width: 18rem;'>
+                                            <img class='card-img-top'
+                                                src='images/yoga.jpg'
+                                                alt='".$product['pr_name']." Card image Cap'>
+                                            <div class='card-body bg-dark'>
+                                                <h5 class='card-title text-light'>".$product['pr_name']."</h5>
+                                                <p class='card-text text-light'>".$product['pr_comment']."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-7'>
+                                        
+                                            <h5>Price</h5>
+                                            <p class='display-4 text-danger'>$".$product['pr_price']."</p>
+                                            <h5>Product</h5>
+                                            <p>".$product['pr_name']."</p>
+                                            <h5>Schedule </h5>
+                                            <p>".$product['pr_comment']."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-secondary'
+                                    data-dismiss='modal'>Close</button>
+                                <button type='button' class='btn btn-primary'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>";
+        
+    }
+    $card .= "</div>";
+    return $card;
+}
 ?>

@@ -238,6 +238,7 @@ switch ($action){
             }
             break;
     default:
+            
         include "../views/admin.php";
         break;
  }

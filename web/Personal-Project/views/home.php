@@ -27,7 +27,7 @@
                         <h2 class="text-center section-padding">Get 20% off adding your package to the cart</h2>
                     </div>
                 </div>
-                <div class="container bg-light">
+            <!--    <div class="container bg-light">
                     <div class="row justify-content-around section-padding">
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="images/yoga.jpg" alt="Yoga Card image Cap">
@@ -35,12 +35,12 @@
                                 <h5 class="card-title text-light">YOGA</h5>
                                 <p class="card-text text-light">A group of physical, mental, and spiritual practices or disciplines which originated in ancient India.
                                 Start your new experience with our instructors</p>
-                                <!-- Button trigger modal -->
+                                
                                 <button type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#yoga-card">
                                     Begin now!
                                 </button>
-                                <!-- Modal -->
+                                
                                 <div class="modal fade" id="yoga-card" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="col-md-6 modal-card modal-dialog " role="document">
@@ -94,7 +94,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+                        <?php
+                        if (isset($product_cards)){
+                            echo $product_cards;
+                        }
+
+                        ?>
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="images/weight.jpg" alt="Weight card image Cap">
                             <div class="card-body bg-dark">
