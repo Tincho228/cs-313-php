@@ -64,7 +64,7 @@ case 'modify-page':
     include "../views/product-update.php";
     break;
 case 'updateProduct':
-    $pr_id = filter_input(INPUT_GET, 'pr_id', FILTER_SANITIZE_NUMBER_INT);
+    $pr_id = filter_input(INPUT_POST, 'pr_id', FILTER_SANITIZE_NUMBER_INT);
     $pr_name = filter_input(INPUT_POST, 'pr_name', FILTER_SANITIZE_STRING);
     $pr_price = filter_input(INPUT_POST, 'pr_price', FILTER_SANITIZE_NUMBER_INT);
     $pr_comment = filter_input(INPUT_POST, 'pr_comment', FILTER_SANITIZE_STRING);
