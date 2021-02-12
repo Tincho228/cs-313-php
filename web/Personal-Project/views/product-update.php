@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
             <label for="price">Product price</label>
-            <input type="number" class="form-control" id="price" required name="pr_price" value = <?php if(isset($product_detail['pr_price'])){echo $product_detail['pr_price'];}?> >
+            <input type="number" class="form-control" id="price" required name="pr_price" value = <?php if(isset($product_detail['pr_price'])){echo "$ ".$product_detail['pr_price'];}?> >
         </div>
         <div class="form-group">
             <label for="comment">Make a comment</label>
@@ -40,6 +40,7 @@
         <button type="submit" class="btn btn-dark" value="Add product">Add product</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="updateProduct">
+        <input type="hidden" name="pr_id" value = <?php if(isset($product_detail['pr_id'])){echo $product_detail['pr_id'];}?>>
     </form>
 </div>
 </main>
