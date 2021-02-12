@@ -58,8 +58,33 @@ case 'delete':
         $_SESSION['message'] = 'The product was deleted.';
         header("location:index.php");
     break;
-case 'modify':
-    echo "modifying";
+case 'modify-page':
+    $pr_id = filter_input(INPUT_GET, 'pr_id', FILTER_SANITIZE_NUMBER_INT);
+    $product_detail = getproductInfo($pr_id);
+    include "../views/product-update.php";
+    break;
+case 'updateProduct':
+    $pr_id = filter_input(INPUT_GET, 'pr_id', FILTER_SANITIZE_NUMBER_INT);
+    $pr_name = filter_input(INPUT_POST, 'pr_name', FILTER_SANITIZE_STRING);
+    $pr_price = filter_input(INPUT_POST, 'pr_price', FILTER_SANITIZE_NUMBER_INT);
+    $pr_comment = filter_input(INPUT_POST, 'pr_comment', FILTER_SANITIZE_STRING);
+    // Check for missing data
+    if (empty($pr_name) || empty($pr_price) || empty($pr_comment)) {
+            $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
+            include '../views/product-add.php';
+            exit;
+        }
+    $regOutcome = updateProduct($pr_id, $pr_name, $pr_price, $pr_comment);
+    // Check and report the result
+    if ($regOutcome === 1) {
+        $_SESSION['message'] = '<p>Product successfuly updated</p>';
+        header("location:index.php");
+        exit;  
+    } else {
+        $_SESSION['message'] = '<p>Sorry, the product could not be added. Please try again.</p>';
+        include '../view/product-update.php';
+        exit;
+    }
     break;
 default:
 $product_data = getProductList();

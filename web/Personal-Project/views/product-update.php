@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Add a product</title>
+    <title>Product update</title>
 </head>
 <body>
 <?php
@@ -19,7 +19,7 @@
 <main>
 <div class="container">
     <form action="../products/index.php" method="post" class="register-form">
-        <h2 >Add a product</h2>
+        <h2 >Product Update</h2>
         <?php
         //tag to show any messages that may need to be displayed
         if (isset($_SESSION['message'])) {
@@ -27,19 +27,19 @@
         } ?>
         <div class="form-group">
             <label for="name">Product name</label>
-            <input type="text" class="form-control" id="name" required name="pr_name" >
+            <input type="text" class="form-control" id="name" required name="pr_name" value = <?php if(isset($product_detail['pr_name'])){echo $product_detail['pr_name'];}?>>
         </div>
         <div class="form-group">
             <label for="price">Product price</label>
-            <input type="number" class="form-control" id="price" required name="pr_price" >
+            <input type="number" class="form-control" id="price" required name="pr_price" value = <?php if(isset($product_detail['pr_price'])){echo $product_detail['pr_price'];}?> >
         </div>
         <div class="form-group">
             <label for="comment">Make a comment</label>
-            <textarea name="pr_comment" class="form-control" id="comment" cols="30" rows="5"></textarea>
+            <textarea name="pr_comment" class="form-control" id="comment" cols="30" rows="5"><?php if(isset($product_detail['pr_name'])){echo $product_detail['pr_name'];}?></textarea>
         </div>
         <button type="submit" class="btn btn-dark" value="Add product">Add product</button>
         <!-- Add the action name - value pair -->
-        <input type="hidden" name="action" value="addProduct">
+        <input type="hidden" name="action" value="updateProduct">
     </form>
 </div>
 </main>

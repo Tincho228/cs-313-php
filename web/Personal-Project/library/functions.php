@@ -34,7 +34,7 @@ function buildProductList($product_data){
                 <td>".$product['pr_price']."</td>
                 <td>".$product['pr_comment']."</td>
                 <td><a href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=delete&pr_id=".urlencode($product['pr_id'])."'>Delete</a></td>
-                <td><a href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=modify&pr_id=".urlencode($product['pr_id'])."'>Modify</a></td>
+                <td><a href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=modify-page&pr_id=".urlencode($product['pr_id'])."'>Modify</a></td>
              </tr>";
     
     }
