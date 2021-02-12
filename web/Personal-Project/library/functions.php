@@ -13,6 +13,16 @@ function checkPassword($cl_password){
     return preg_match($pattern, $cl_password);
    }
 
-
+function buildProductList($product_data){
+    $list = "<ul>";
+    foreach($product_data as $product){
+        $list .= "<li>".$product['pr_id']."</li>";
+        $list .= "<li>".$product['pr_name']."</li>";
+        $list .= "<li>".$product['pr_rpice']."</li>";
+        $list .= "<li>".$product['pr_comment']."</li>";;
+    }
+    $list.="</ul>";
+    return $list;
+}
 
 ?>

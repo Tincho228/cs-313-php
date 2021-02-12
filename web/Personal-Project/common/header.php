@@ -36,7 +36,7 @@
                                     setcookie('firstname', "", strtotime('-1 year'), '/');
                                 }
                                 // Set Session based welcome message link if loggedin
-                                echo "<a class='nav-link text-light' href='#' title='Click to register or login'><span>Welcome ". $_SESSION['clientData']['cl_firstname']."</span></a>";
+                                echo "<a class='nav-link text-light' href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php' title='Click to register or login'><span>Welcome ". $_SESSION['clientData']['cl_firstname']."</span></a>";
                             }else if(isset($_COOKIE['firstname'])){
                                 // If not loggedin
                                 $_SESSION['cookieFirstname'] = filter_input(INPUT_COOKIE, 'firstname', FILTER_SANITIZE_STRING);
