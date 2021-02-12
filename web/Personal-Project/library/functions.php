@@ -14,15 +14,34 @@ function checkPassword($cl_password){
    }
 
 function buildProductList($product_data){
-    $list = "<ul>";
+    $list = "<table class='table'>";
+    $list .="<thead>
+            <tr>
+                <th scope='col'>#</th>
+                <th scope='col'>First</th>
+                <th scope='col'>Last</th>
+                <th scope='col'>Handle</th>
+                <th scope='col'>Action</th>
+                <th scope='col'>Action</th>
+            </tr>
+            </thead>";
+    $list .="<tbody>";
     foreach($product_data as $product){
-        $list .= "<li>".$product['pr_id']."</li>";
-        $list .= "<li>".$product['pr_name']."</li>";
-        $list .= "<li>".$product['pr_rpice']."</li>";
-        $list .= "<li>".$product['pr_comment']."</li>";;
+    $list .= "<tr>
+                <th scope='row'>".$product['pr_id']."</th>
+                <td>".$product['pr_name']."</td>
+                <td>".$product['pr_price']."</td>
+                <td>".$product['pr_comment']."</td>
+                <td><a href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=delete&pr_id".urlencode($product['pr_id'])."'>Delete</a></td>
+                <td><a href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=modify&pr_id".urlencode($product['pr_id'])."'>Modify</a></td>
+             </tr>";
+    
     }
-    $list.="</ul>";
+    $list .= "</tbody>";
+
     return $list;
 }
 
 ?>
+
+<a href='/phpmotors/vehicles/?action=vehicle-detail&invId=".urlencode($vehicle['invId'])."'>
