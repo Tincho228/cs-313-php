@@ -19,7 +19,11 @@
     <div class="container">
         <h1>You are logged in</h1>
         <h3>My account Details</h3>
-        <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=updateClient"><i class="fa fa-pencil-square" aria-hidden="true"></i>Modify account</a> 
+        <?php
+        if (isset($_SESSION['message'])) {
+        echo $_SESSION['message'];
+        } ?>
+        <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=updateClient"><i class="fa fa-pencil" aria-hidden="true"></i>Modify account</a> 
         <hr>
         <h3>My reviews</h3>
         <hr>

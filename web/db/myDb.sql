@@ -6,8 +6,9 @@ CREATE table public.clients
     cl_firstname VARCHAR(25) NOT NULL,
     cl_lastname VARCHAR(25) NOT NULL,
     cl_email VARCHAR(255) UNIQUE NOT NULL,
-    cl_password VARCHAR(255) UNIQUE NOT NULL,
-    cl_level "ENUM" NOT NULL	
+    cl_phone VARCHAR(50) NOT NULL,
+    cl_level "ENUM" NOT NULL,	
+    cl_password VARCHAR(255) UNIQUE NOT NULL
 );
 
 CREATE table public.products

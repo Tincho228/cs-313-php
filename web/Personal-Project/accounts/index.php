@@ -54,7 +54,7 @@ switch ($action){
         // Hash the checked password
         $hashedPassword = password_hash($cl_password, PASSWORD_DEFAULT);
         // Send the data to the model
-        $regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $hashedPassword, $cl_phone);
+        $regOutcome = regClient($cl_firstname, $cl_lastname, $cl_email, $cl_phone, $hashedPassword );
     
         // Check and report the result
         if ($regOutcome === 1) {
@@ -122,7 +122,7 @@ switch ($action){
         
         // Send them to the admin view
         $_SESSION['message'] = '<p>You are logged In.</p>';
-        include "../views/admin.php";
+        include "../views/client-update.php";
         exit;
         }
         break;
@@ -180,62 +180,62 @@ switch ($action){
                  $updateResult = updateAccount($cl_id, $cl_firstname, $cl_lastname, $cl_email, $cl_phone);
                  // Check and report the result
                  if ($updateResult) {
-                 $_SESSION['message'] = "<p>Congratulations, your Account was successfully updated.</p>";
-                 $clientData = getClientModified($cl_id);
-                 // A valid user exists, log them in
-                 $_SESSION['loggedin'] = TRUE;
-                 array_pop($clientData);
-                 $_SESSION['clientData'] = $clientData;
-                 // Send them to the admin view
-                 header('location:index.php');
-                 exit;
+                    $_SESSION['message'] = "<p>Congratulations, your Account was successfully updated.</p>";
+                    $clientData = getClientModified($cl_id);
+                    // A valid user exists, log them in
+                    $_SESSION['loggedin'] = TRUE;
+                    array_pop($clientData);
+                    $_SESSION['clientData'] = $clientData;
+                    // Send them to the admin view
+                    header('location:index.php');
+                    exit;
                  } else {
-                 $_SESSION['message'] = '<p>Sorry, your Account could not be updated.</p>';
-                 include "../view/client-update.php";
-                 exit;
+                    $_SESSION['message'] = '<p>Sorry, your Account could not be updated.</p>';
+                    include "../view/client-update.php";
+                    exit;
                  }           
             }
             break;
-    case 'updatePassword':/*
-            $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
-            $clientId = filter_input(INPUT_POST, 'clientId', FILTER_SANITIZE_NUMBER_INT);
+    case 'updatePassword':
+            $cl_Password = filter_input(INPUT_POST, 'cl_password', FILTER_SANITIZE_STRING);
+            $cl_id = filter_input(INPUT_POST, 'cl_id', FILTER_SANITIZE_NUMBER_INT);
             //Validating password
-            $checkPassword = checkPassword($clientPassword);
-            $clientData = getClientModified($clientId);
+            $checkPassword = checkPassword($cl_password);
+            $clientData = getClientModified($cl_id);
             // Check for missing data
-            if (empty($clientId) || empty($checkPassword)) {
-                $_SESSION['message'] = '<p class="message_error">Please provide information for all empty form fields.</p>';
-                require $_SERVER["DOCUMENT_ROOT"]."/phpmotors/view/client-update.php";
+            if (empty($cl_id) || empty($checkPassword)) {
+                $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
+                include "../views/client-update.php";
                 exit;
             }
             // Hash the checked password
-            $hashCheck = password_verify($clientPassword, $clientData['clientPassword']);
+            $hashCheck = password_verify($cl_password, $clientData['cl_password']);
             // If the hashes match create an error
             // and return to the login view
             if ($hashCheck) {
-                $_SESSION['message'] = '<p class="message_error">Notice: It cannot be the same password</p>';
-                require $_SERVER["DOCUMENT_ROOT"]."/phpmotors/view/client-update.php";
+                $_SESSION['message'] = '<p>Notice: It cannot be the same password</p>';
+                include "../views/client-update.php";
                 exit;
             }
             // Store the array into the session
             array_pop($clientData);
             $_SESSION['clientData'] = $clientData;
     
-            $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
+            $hashedPassword = password_hash($cl_password, PASSWORD_DEFAULT);
             // Send the data to the model
-            $updateResult = updatePassword($hashedPassword, $clientId);
+            $updateResult = updatePassword($hashedPassword, $cl_id);
             // Clear the password from dataClient and store it into the SESSION
             
             // Check and report the result
             if ($updateResult === 1) {
-                $_SESSION['message'] = '<p class="message_error">Congratulations! Your password has been updated.</p>';
-                header('location: /phpmotors/accounts/index.php');
+                $_SESSION['message'] = '<p>Congratulations! Your password has been updated.</p>';
+                header('location:index.php');
                 exit;  
             } else {
-                $_SESSION['message'] = '<p class="message_error">Sorry, your Password could not be changed. Please try again.</p>';
-                require $_SERVER["DOCUMENT_ROOT"]."/phpmotors/view/client-update.php";
+                $_SESSION['message'] = '<p>Sorry, your Password could not be changed. Please try again.</p>';
+                include "../views/client-update.php";
                 exit;
-            }*/
+            }
             break;
     default:
         include "../views/admin.php";
