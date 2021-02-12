@@ -57,7 +57,7 @@
         } ?>
         <div class="form-group">
             <label for="password">Enter new password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+            <input type="password" class="form-control" id="password" required name="cl_password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
             <span>At least 8 characters and has at least 1 uppercase character, 1 number and 1 special character.</span>
         </div>
         <button type="submit" class="btn btn-dark" value="Modify Password">Modify Password</button>

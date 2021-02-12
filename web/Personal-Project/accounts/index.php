@@ -122,7 +122,7 @@ switch ($action){
         
         // Send them to the admin view
         $_SESSION['message'] = '<p>You are logged In.</p>';
-        include "../views/client-update.php";
+        include "../views/admin.php";
         exit;
         }
         break;
@@ -197,7 +197,7 @@ switch ($action){
             }
             break;
     case 'updatePassword':
-            $cl_Password = filter_input(INPUT_POST, 'cl_password', FILTER_SANITIZE_STRING);
+            $cl_password = filter_input(INPUT_POST, 'cl_password', FILTER_SANITIZE_STRING);
             $cl_id = filter_input(INPUT_POST, 'cl_id', FILTER_SANITIZE_NUMBER_INT);
             //Validating password
             $checkPassword = checkPassword($cl_password);
