@@ -18,8 +18,8 @@
 ?>
 <main>
 <div class="container">
-    <form action="../accounts/index.php" method="post" class="register-form">
-        <h1 class="text-center">Register form</h1>
+    <form action="../products/index.php" method="post" class="register-form">
+        <h2 >Add a product</h2>
         <?php
         //tag to show any messages that may need to be displayed
         if (isset($_SESSION['message'])) {
