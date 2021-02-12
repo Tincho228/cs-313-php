@@ -17,8 +17,14 @@
 ?>
 <main>
     <div class="container">
-        <h1>You are logged in</h1>
+        
         <h3>My account Details</h3>
+        <ul class="list-group">
+            <li class="list-group-item">Name <?php if(isset($_SESSION['clientData']['cl_firstname'])){echo $_SESSION['clientData']['cl_firstname'];}?></li>
+            <li class="list-group-item">Last Name <?php if(isset($_SESSION['clientData']['cl_lastname'])){echo $_SESSION['clientData']['cl_lastname'];}?></li>
+            <li class="list-group-item">Email <?php if(isset($_SESSION['clientData']['cl_email'])){echo $_SESSION['clientData']['cl_email'];}?></li>
+            <li class="list-group-item">Phone number <?php if(isset($_SESSION['clientData']['cl_phone'])){echo $_SESSION['clientData']['cl_phone'];}?></li>
+        </ul>
         <?php
         if (isset($_SESSION['message'])) {
         echo $_SESSION['message'];
@@ -28,7 +34,10 @@
         <h3>My reviews</h3>
         <hr>
         <h3>Membership Details</h3>
+        <p>Membership not activated</p>
         <hr>
+        <h3>My products</h3>
+        
     </div>
 </main>
 <?php
