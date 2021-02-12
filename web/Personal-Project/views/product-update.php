@@ -10,20 +10,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Products</title>
+    <title>Product update</title>
 </head>
 <body>
 <?php
     include "../common/header.php";
 ?>
 <main>
-    <div class="container">
+<div class="container">
+    <form action="../products/index.php" method="post" class="register-form">
+        <h2 >Product Update</h2>
         <?php
-        if (isset($product_list)) {
-        echo $product_list;
+        //tag to show any messages that may need to be displayed
+        if (isset($_SESSION['message'])) {
+            echo $_SESSION['message'];
         } ?>
-        <a class="btn btn-dark" href="http://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=addProduct"><i class="fa fa-plus" aria-hidden="true"></i> Add product</a> 
-    </div>
+        <div class="form-group">
+            <label for="name">Product name</label>
+            <input type="text" class="form-control" id="name" required name="pr_name" value = <?php if(isset($product_detail['pr_name'])){echo $product_detail['pr_name'];}?>>
+        </div>
+        <div class="form-group">
+            <label for="price">Product price</label>
+            <input type="number" class="form-control" id="price" required name="pr_price" value = <?php if(isset($product_detail['pr_price'])){echo $product_detail['pr_price'];}?> >
+        </div>
+        <div class="form-group">
+            <label for="comment">Make a comment</label>
+            <textarea name="pr_comment" class="form-control" id="comment" cols="30" rows="5"><?php if(isset($product_detail['pr_name'])){echo $product_detail['pr_comment'];}?></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark" value="Add product">Add product</button>
+        <!-- Add the action name - value pair -->
+        <input type="hidden" name="action" value="updateProduct">
+        <input type="hidden" name="pr_id" value = <?php if(isset($product_detail['pr_id'])){echo $product_detail['pr_id'];}?>>
+    </form>
+</div>
 </main>
 <?php
     include "../common/footer.php";

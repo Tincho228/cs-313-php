@@ -16,7 +16,7 @@
                                     <a class="nav-link active" aria-current="page" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Products</a>
+                                    <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php">Products</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contact Us</a>
@@ -36,7 +36,7 @@
                                     setcookie('firstname', "", strtotime('-1 year'), '/');
                                 }
                                 // Set Session based welcome message link if loggedin
-                                echo "<a class='nav-link text-light' href='#' title='Click to register or login'><span>Welcome ". $_SESSION['clientData']['cl_firstname']."</span></a>";
+                                echo "<a class='nav-link text-light' href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php' title='Click to register or login'><span>Welcome ". $_SESSION['clientData']['cl_firstname']."</span></a>";
                             }else if(isset($_COOKIE['firstname'])){
                                 // If not loggedin
                                 $_SESSION['cookieFirstname'] = filter_input(INPUT_COOKIE, 'firstname', FILTER_SANITIZE_STRING);
@@ -68,7 +68,7 @@
                         <hr class="my-2">
                         <p class="text-light">Log in and start now!</p>
                         <p class="lead">
-                            <a class="btn text-light btn-outline-danger btn-lg" href="Jumbo action link"
+                            <a class="btn text-light btn-danger btn-lg" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=Login"
                                 role="button">Start now!</a>
                         </p>
                     </div>

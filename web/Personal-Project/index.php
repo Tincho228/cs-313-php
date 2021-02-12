@@ -11,11 +11,10 @@ session_start();
 //$_SESSION['loggedin'] = 0;
 
 // Get the database connection file
-/*require_once 'library/connections.php';
-// Get the PHP Motors model for use as needed
-require_once 'model/main-model.php';
-// Get the functions library
-require_once 'library/functions.php';*/
+// Get the database connection file
+require_once '../library/connections.php';
+require_once '../library/functions.php';
+require_once '../model/products-model.php';
 
 
 $action = filter_input(INPUT_POST, 'action');
@@ -31,6 +30,8 @@ switch ($action){
     break;
      
     default:
+    $product_data = getProductList();
+    $product_cards = buildCarProducts($product_data);
     require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/views/home.php";
      break;
  }
