@@ -49,7 +49,7 @@ case 'add-page':
     include "../views/product-add.php";
     break;
 case 'delete':
-    $pr_id = filter_input(INPUT_POST, 'pr_id', FILTER_SANITIZE_NUMBER_INT);
+    $pr_id = filter_input(INPUT_GET, 'pr_id', FILTER_SANITIZE_NUMBER_INT);
     $deleteInfo = deleteProduct($pr_id);
         if(count($deleteInfo)<1){
             $_SESSION['message'] = 'Sorry, the product could not be deleted.';
