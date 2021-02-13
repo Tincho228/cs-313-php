@@ -107,7 +107,8 @@ function buildCarProducts($product_data){
                                     $card.="<input type='hidden' name='pr_id' value = '".$product['pr_id']."'>";
                                     $card.="<input type='hidden' name='cl_id' value = '".$_SESSION['clientData']['cl_id']."'>";
                                 }else {
-                                    $card.="<a class='btn btn-primary text-light' href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</a>";
+                                    $card.="<a class='btn btn-primary text-light' href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</a>
+                                    <span class=''>**You are not logged in</span>";
                                 }
                                 $card.="
                             </div>

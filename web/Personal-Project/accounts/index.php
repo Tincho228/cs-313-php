@@ -121,8 +121,8 @@ switch ($action){
         $_SESSION['clientData'] = $clientData;
         
         // Send them to the admin view
-        $_SESSION['message'] = '<p>You are logged In.</p>';
-        include "../views/admin.php";
+        
+        include "../views/home.php";
         exit;
         }
         break;

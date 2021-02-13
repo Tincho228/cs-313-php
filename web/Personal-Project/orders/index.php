@@ -62,7 +62,10 @@ case 'delete':
     include "../views/cart.php";
     break;
 case 'checkout':
-    echo "checkout";
+    include "../views/checkout.php";
+    break;
+case 'confirmation':
+    echo "confirmation";
     break;
 default:
     include "../views/cart.php";
