@@ -22,7 +22,16 @@
                                     <a class="nav-link" href="#">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fas fa-cart-arrow-down"></i>Cart</a>
+                                    <a class="nav-link" href="#"><i class="fas fa-cart-arrow-down"></i>Cart
+                                    <span>
+                                    <?php
+                                        if(isset($_SESSION['shopping_cart'])){
+                                            $count = count($_SESSION['shopping_cart']);
+                                            echo "(".$count.")";
+                                        }else {
+                                            echo "0";
+                                        }?>
+                                    </span></a>
                                 </li>
                             </ul>
                         </div>

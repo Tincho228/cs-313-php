@@ -38,9 +38,7 @@ case 'addtoCart':
         $_SESSION['shopping_cart'][$count] = $item_array;
         }
         else {
-            echo "item already added";
-            $key = searchForId($_POST['itemId'],$_SESSION['shopping_cart']);
-            $_SESSION['shopping_cart'][$key]['quantity'] += $_POST['quantity'];
+            $_SESSION['message'] = "item already added";
         }
     }
     else{
