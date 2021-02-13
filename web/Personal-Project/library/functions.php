@@ -96,12 +96,16 @@ function buildCarProducts($product_data){
                             </div>
                             <div class='modal-footer'>
                                 <button type='button' class='btn btn-secondary'
-                                    data-dismiss='modal'>Close</button>
-                                <button type='button' class='btn btn-primary'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</button> 
-                                <input type='hidden' name='action' value = 'addtoCart'>
-                                <input type='hidden' name='pr_id' value = '".$product['pr_id']."'>";
-                                if(isset($_SESSION['clientData']['cl_id'])){
+                                    data-dismiss='modal'>Close</button>";
+                                
+                                
+                                if(isset($_SESSION['loggedin'])){
+                                    $card.="<button type='button' class='btn btn-primary'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</button>"; 
+                                    $card.="<input type='hidden' name='action' value = 'addtoCart'>";
+                                    $card.="<input type='hidden' name='pr_id' value = '".$product['pr_id']."'>";
                                     $card.="<input type='hidden' name='cl_id' value = '".$_SESSION['clientData']['cl_id']."'>";
+                                }else {
+                                    $card.="<a class='btn btn-primary href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</a>";
                                 }
                                 $card.="
                             </div>
