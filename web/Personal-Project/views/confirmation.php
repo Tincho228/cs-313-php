@@ -64,7 +64,7 @@
     <p>Phone: <?php echo $_SESSION['clientData']['cl_phone']; ?></p>
     <hr>
     </div>
-        <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/index.php">OK!!</a>
+        <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php?action=clean">OK!!</a>
     </div>
     </div>
 </main>

@@ -23,7 +23,6 @@ CREATE table public.products
 CREATE table public.orders
 (
     or_id SERIAL NOT NULL PRIMARY KEY,
-    or_comment TEXT NOT NULL,
     cl_id INT,
     pr_id INT,
     FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id),

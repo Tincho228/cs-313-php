@@ -67,9 +67,12 @@ case 'checkout':
     break;
 case 'confirmation':
     $shopping_cart = $_SESSION['shopping_cart']; 
-    regShoppingCart($shopping_cart);
-    unset($_SESSION['shopping_cart']); 
+    regShoppingCart($shopping_cart); 
     include "../views/confirmation.php";
+    break;
+case 'clean':
+    unset($_SESSION['shopping_cart']);
+    header("location ../index.php");
     break;
 default:
     include "../views/cart.php";
