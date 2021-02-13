@@ -62,7 +62,7 @@ function buildCarProducts($product_data){
                 <div class='modal fade' id='".$product['pr_name']."-card' tabindex='-1' role='dialog'
                     aria-labelledby='exampleModalLabel' aria-hidden='true'>
                     <div class='col-md-6 modal-card modal-dialog' role='document'>
-                    <form method='POST' action='../orders/index.php'>
+                    <form method='POST' action='orders/index.php'>
                         <div class='modal-content'>
                             <div class='modal-header bg-dark'>
                                 <img class='navbar-logo' src='images/logo.png' alt='navbar logo'>
