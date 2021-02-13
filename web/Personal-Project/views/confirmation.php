@@ -19,9 +19,9 @@
 <main>
     <div class="container">
         <div class="container-fluid bg-light">
-            <div class="row">
-                <img src="personalHomepage/images/purchase.jpg" alt="image of purchase">
-                <h1>Your order<br> just send</h1>
+            <div class="col">
+                <img src="../images/purchase.jpg" alt="image of purchase">
+                <h1>Your order just send</h1>
             </div>
         <div>
         <h3>Purchase Details</h3>
@@ -64,7 +64,8 @@
     <p>Phone: <?php echo $_SESSION['clientData']['cl_phone']; ?></p>
     <hr>
     </div>
-        <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php?action=clean">OK!!</a>
+        <h4>We will contact you to finish the purchase</h4>
+        <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php?action=clean">I understand</a>
     </div>
     </div>
 </main>
