@@ -23,7 +23,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#"><i class="fas fa-cart-arrow-down"></i>Cart
-                                    <span>
+                                    <span class="text-danger">
                                     <?php
                                         if(isset($_SESSION['shopping_cart'])){
                                             $count = count($_SESSION['shopping_cart']);

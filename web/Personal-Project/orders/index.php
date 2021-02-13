@@ -51,10 +51,10 @@ case 'addtoCart':
         );
         $_SESSION['shopping_cart'][0] = $item_array;
     }
-print_r($_SESSION['shopping_cart']);
+    header('location:../index.php');
 break;
 default:
-    echo "defualt";
+    include "../views/cart.php";
 break;
 }
 ?>
