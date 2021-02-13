@@ -59,7 +59,7 @@ case 'delete':
             unset($_SESSION['shopping_cart'][$key]);
         }
     }
-    include "..views/cart.php";
+    include "../views/cart.php";
     break;
 case 'checkout':
     echo "checkout";
