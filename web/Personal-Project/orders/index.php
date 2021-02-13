@@ -65,7 +65,7 @@ case 'checkout':
     include "../views/checkout.php";
     break;
 case 'confirmation':
-    echo "confirmation";
+    include "../views/confirmation.php";
     break;
 default:
     include "../views/cart.php";

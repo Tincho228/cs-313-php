@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Template</title>
+    <title>Checkout</title>
 </head>
 <body>
 <?php
@@ -20,13 +20,13 @@
     <div class="container">
     <div class="container-fluid position-relative bg-light">
                 <h2 class="m-10">Checkout</h2>
-            <div class="row row-cols-2 m-10">  
+            <div class="row row-cols-2">  
                 <div class="col bg-light">
-                    <h2 class="m-10">Contact information</h2>
+                    <h3>Contact information</h3>
                     <form method="post" action="../orders/index.php">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" name='cl_email' class="form-control" id="email" aria-describedby="emailHelp" required value = <?php if(isset($_SESSION['clientData']['cl_email'])){echo $_SESSION['clientData']['cl_email'];}?>>
+                            <input type="email" name='cl_email' class="form-control" id="email" aria-describedby="emailHelp" disabled value = <?php if(isset($_SESSION['clientData']['cl_email'])){echo $_SESSION['clientData']['cl_email'];}?>>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -34,15 +34,15 @@
                         </div>
                         <div class="mb-3">
                             <label for="address" class="form-label">Phone number</label>
-                            <input type="text" name='cl_phone' class="form-control" id="address" required value = <?php if(isset($_SESSION['clientData']['cl_phone'])){echo $_SESSION['clientData']['cl_phone'];}?>>
+                            <input type="text" name='cl_phone' class="form-control" id="address" disabled value = <?php if(isset($_SESSION['clientData']['cl_phone'])){echo $_SESSION['clientData']['cl_phone'];}?>>
                         </div>
-                        <button class="btn btn-dark" type="submit" name="action" value="confirmation">Buy now!</button>
+                        <button class="btn btn-dark" type="submit" name="action" value="confirmation">Confirm order</button>
                     </form>
                 </div>         
                 <div class="col bg-summary">
                     
                     <div class="table-responsive">
-                        <h2 class="m-10" >Order summary</h2>
+                        <h3 class="m-10" >Order summary</h3>
                          <table class="table table-stripped">
                         <tr>
                             <th>Product name</th>

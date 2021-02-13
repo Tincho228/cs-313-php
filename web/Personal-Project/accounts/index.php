@@ -122,7 +122,7 @@ switch ($action){
         
         // Send them to the admin view
         
-        include "../views/home.php";
+        header("location: ../views/home.php");
         exit;
         }
         break;
