@@ -33,16 +33,17 @@ function deleteProduct($pr_id){
 }
 
 // Add a product 
-function addProduct($pr_name, $pr_price, $pr_comment){
+function addProduct($pr_name, $pr_price, $pr_comment, $pr_path){
     $db = herokuConnection();
-    $sql = 'INSERT INTO public.products (pr_name, pr_price, pr_comment)
-        VALUES (:pr_name, :pr_price, :pr_comment)';
+    $sql = 'INSERT INTO public.products (pr_name, pr_price, pr_comment, pr_path)
+        VALUES (:pr_name, :pr_price, :pr_comment, :pr_path)';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
     //  Binding values
     $stmt->bindValue(':pr_name', $pr_name, PDO::PARAM_STR);
     $stmt->bindValue(':pr_price', $pr_price, PDO::PARAM_INT);
     $stmt->bindValue(':pr_comment', $pr_comment, PDO::PARAM_STR);
+    $stmt->bindValue(':pr_path', $pr_path, PDO::PARAM_STR);
     
     // Insert the data
     $stmt->execute();
@@ -74,12 +75,12 @@ function getproductInfo($pr_id){
     return $clientData;
 }
 
-function updateProduct($pr_id, $pr_name, $pr_price, $pr_comment){
+function updateProduct($pr_id, $pr_name, $pr_price, $pr_comment, $pr_path){
     // Create a connection object using the phpmotors connection function
     $db = herokuConnection();
     // The SQL statement
     $sql = 'UPDATE public.products SET pr_name = :pr_name, pr_price = :pr_price, 
-	pr_comment = :pr_comment WHERE pr_id = :pr_id';
+	pr_comment = :pr_comment, pr_path = :pr_path WHERE pr_id = :pr_id';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
@@ -88,7 +89,8 @@ function updateProduct($pr_id, $pr_name, $pr_price, $pr_comment){
     $stmt->bindValue(':pr_id', $pr_id, PDO::PARAM_INT);  
     $stmt->bindValue(':pr_name', $pr_name, PDO::PARAM_STR); 
     $stmt->bindValue(':pr_price', $pr_price, PDO::PARAM_INT); 
-    $stmt->bindValue(':pr_comment', $pr_comment, PDO::PARAM_STR); 
+    $stmt->bindValue(':pr_comment', $pr_comment, PDO::PARAM_STR);
+    $stmt->bindValue(':pr_path', $pr_path, PDO::PARAM_STR); 
     
     // Insert the data
     $stmt->execute();

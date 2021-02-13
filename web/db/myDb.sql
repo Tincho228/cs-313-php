@@ -16,7 +16,8 @@ CREATE table public.products
     pr_id SERIAL NOT NULL PRIMARY KEY,
     pr_name VARCHAR(25) NOT NULL,
     pr_price INT NOT NULL,
-    pr_comment TEXT NOT NULL	
+    pr_comment TEXT NOT NULL,	
+    pr_path VARCHAR(100) NOT NULL
 );
 
 CREATE table public.orders

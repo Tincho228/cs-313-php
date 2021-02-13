@@ -27,13 +27,14 @@ case 'addProduct':
     $pr_name = filter_input(INPUT_POST, 'pr_name', FILTER_SANITIZE_STRING);
     $pr_price = filter_input(INPUT_POST, 'pr_price', FILTER_SANITIZE_NUMBER_INT);
     $pr_comment = filter_input(INPUT_POST, 'pr_comment', FILTER_SANITIZE_STRING);
+    $pr_path = filter_input(INPUT_POST, 'pr_path', FILTER_SANITIZE_STRING);
     // Check for missing data
-    if (empty($pr_name) || empty($pr_price) || empty($pr_comment)) {
+    if (empty($pr_name) || empty($pr_price) || empty($pr_comment) || empty($pr_path)) {
             $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
             include '../views/product-add.php';
             exit;
         }
-    $regOutcome = addProduct($pr_name, $pr_price, $pr_comment);
+    $regOutcome = addProduct($pr_name, $pr_price, $pr_comment, $pr_path);
     // Check and report the result
     if ($regOutcome === 1) {
         $_SESSION['message'] = '<p>Product successfuly added</p>';
@@ -68,13 +69,14 @@ case 'updateProduct':
     $pr_name = filter_input(INPUT_POST, 'pr_name', FILTER_SANITIZE_STRING);
     $pr_price = filter_input(INPUT_POST, 'pr_price', FILTER_SANITIZE_NUMBER_INT);
     $pr_comment = filter_input(INPUT_POST, 'pr_comment', FILTER_SANITIZE_STRING);
+    $pr_path = filter_input(INPUT_POST, 'pr_path', FILTER_SANITIZE_STRING);
     // Check for missing data
-    if (empty($pr_name) || empty($pr_price) || empty($pr_comment)) {
+    if (empty($pr_name) || empty($pr_price) || empty($pr_comment) || empty($pr_path)) {
             $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
             include '../views/product-add.php';
             exit;
         }
-    $regOutcome = updateProduct($pr_id, $pr_name, $pr_price, $pr_comment);
+    $regOutcome = updateProduct($pr_id, $pr_name, $pr_price, $pr_comment, $pr_path);
     // Check and report the result
     if ($regOutcome === 1) {
         $_SESSION['message'] = '<p>Product successfuly updated</p>';

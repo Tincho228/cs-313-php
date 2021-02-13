@@ -20,9 +20,10 @@ function buildProductList($product_data){
     $list .="<thead>
             <tr>
                 <th scope='col'>#</th>
-                <th scope='col'>First</th>
-                <th scope='col'>Last</th>
-                <th scope='col'>Handle</th>
+                <th scope='col'>Product</th>
+                <th scope='col'>Price</th>
+                <th scope='col'>Comment</th>
+                <th scope='col'>Path</th>
                 <th scope='col'>Action</th>
                 <th scope='col'>Action</th>
             </tr>
@@ -34,6 +35,7 @@ function buildProductList($product_data){
                 <td>".$product['pr_name']."</td>
                 <td>".$product['pr_price']."</td>
                 <td>".$product['pr_comment']."</td>
+                <td>".$product['pr_path']."</td>
                 <td><a href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=delete&pr_id=".urlencode($product['pr_id'])."'>Delete</a></td>
                 <td><a href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php?action=modify-page&pr_id=".urlencode($product['pr_id'])."'>Modify</a></td>
              </tr>";
@@ -50,14 +52,14 @@ function buildCarProducts($product_data){
 
     foreach($product_data as $product){
     $card.= "<div class='card' style='width: 18rem;'>
-                <img class='card-img-top' src='images/yoga.jpg' alt='".$product['pr_name']." Card image Cap'>
+                <img class='card-img-top' src='".$product['pr_path']."' alt='".$product['pr_name']." Card image Cap'>
             <div class='card-body bg-dark'>
                 <h5 class='card-title text-light'>".$product['pr_name']."</h5>
                 <p class='card-text text-light'>".$product['pr_comment']."</p>
                 <!-- Button trigger modal -->
-                <button type='button' class='btn btn-danger' data-toggle='modal' data-target='#yoga-card'>Begin now!</button>
+                <button type='button' class='btn btn-danger' data-toggle='modal' data-target='#".$product['pr_name']."-card'>Begin now!</button>
                 <!-- Modal -->
-                <div class='modal fade' id='yoga-card' tabindex='-1' role='dialog'
+                <div class='modal fade' id='".$product['pr_name']."-card' tabindex='-1' role='dialog'
                     aria-labelledby='exampleModalLabel' aria-hidden='true'>
                     <div class='col-md-6 modal-card modal-dialog' role='document'>
                         <div class='modal-content'>
@@ -74,7 +76,7 @@ function buildCarProducts($product_data){
                                     <div class='col-md-5 col-sm-12'>
                                         <div class='card' style='width: 18rem;'>
                                             <img class='card-img-top'
-                                                src='images/yoga.jpg'
+                                                src='".$product['pr_path']."'
                                                 alt='".$product['pr_name']." Card image Cap'>
                                             <div class='card-body bg-dark'>
                                                 <h5 class='card-title text-light'>".$product['pr_name']."</h5>
