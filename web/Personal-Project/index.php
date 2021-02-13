@@ -31,10 +31,8 @@ switch ($action){
      
     default:
     $product_data = getProductList();
-    print_r($product_data);
     $product_cards = buildCarProducts($product_data);
-    echo $product_cards;
-    //require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/views/home.php";
+    require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/views/home.php";
      break;
  }
  ?>

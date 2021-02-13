@@ -27,6 +27,12 @@
                         <h2 class="text-center section-padding">Get 20% off adding your package to the cart</h2>
                     </div>
                 </div>
+                <?php
+                if(isset($product_cards)){
+                    echo $product_cards;
+                }
+                ?>
+                <!--
                 <div class="container bg-light">
                     <div class="row justify-content-around section-padding">
                         <div class="card" style="width: 18rem;">
@@ -103,12 +109,12 @@
                                 <p class="card-text text-light">Programming Safe and Effective Workouts.
                                 Ensuring Safety, Health, and Welfare in Fitness Environments.
                                 </p>
-                                <!-- Button trigger modal -->
+                                
                                 <button type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#training-card">
                                     Begin now!
                                 </button>
-                                <!-- Modal -->
+                            
                                 <div class="modal fade" id="training-card" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="col-md-6 modal-card modal-dialog " role="document">
@@ -165,12 +171,12 @@
                                 <p class="card-text text-light">Some quick example text to build on the card title and make up the
                                     bulk
                                     of the card's content.</p>
-                                <!-- Button trigger modal -->
+                               
                                 <button type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#spinning-card">
                                     Begin now!
                                 </button>
-                                <!-- Modal -->
+                            
                                 <div class="modal fade" id="spinning-card" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="col-md-6 modal-card modal-dialog " role="document">
@@ -221,7 +227,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </section>
             <section class="reviews">
                 <div class="container">
