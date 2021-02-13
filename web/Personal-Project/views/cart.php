@@ -19,7 +19,7 @@
 <main>
     <div class="container">
     <div class="table-responsive position-relative bg-light">
-            <h1>ORDER DETAILS</h1>
+            <h2>ORDER DETAILS</h2>
             <table class="table table-stripped">
                 <tr>
                     <th>Product name</th>
