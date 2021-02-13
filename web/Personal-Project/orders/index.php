@@ -8,7 +8,6 @@
 
 // Create or access a Session
 session_start();
-//$_SESSION['loggedin'] = 0;
 
 // Get the database connection file
 //require_once '../library/connections.php';
@@ -25,6 +24,36 @@ $action = filter_input(INPUT_POST, 'action');
 switch ($action){
 case 'addtoCart':
     echo "add to  session cart";
+    if(isset($_SESSION['shopping_cart'])){
+        $item_array_id = array_column($_SESSION['shopping_cart'],"pr_id");
+        if(!in_array($_POST['pr_id'], $item_array_id)){
+            $count = count($_SESSION['shopping_cart']);
+            $item_array = array(
+                'pr_name' => filter_input(INPUT_POST, 'pr_name', FILTER_SANITIZE_STRING),
+                'pr_price' => filter_input(INPUT_POST, 'pr_price', FILTER_SANITIZE_NUMBER_INT),
+                'pr_comment' => filter_input(INPUT_POST, 'pr_comment', FILTER_SANITIZE_STRING),
+                'pr_id' => filter_input(INPUT_POST, 'pr_id', FILTER_SANITIZE_NUMBER_INT),
+                'cl_id' => filter_input(INPUT_POST, 'cl_id', FILTER_SANITIZE_NUMBER_INT)
+            );
+        $_SESSION['shopping_cart'][$count] = $item_array;
+        }
+        else {
+            echo "item already added";
+            $key = searchForId($_POST['itemId'],$_SESSION['shopping_cart']);
+            $_SESSION['shopping_cart'][$key]['quantity'] += $_POST['quantity'];
+        }
+    }
+    else{
+        $item_array = array(
+            'pr_name' => filter_input(INPUT_POST, 'pr_name', FILTER_SANITIZE_STRING),
+            'pr_price' => filter_input(INPUT_POST, 'pr_price', FILTER_SANITIZE_NUMBER_INT),
+            'pr_comment' => filter_input(INPUT_POST, 'pr_comment', FILTER_SANITIZE_STRING),
+            'pr_id' => filter_input(INPUT_POST, 'pr_id', FILTER_SANITIZE_NUMBER_INT),
+            'cl_id' => filter_input(INPUT_POST, 'cl_id', FILTER_SANITIZE_NUMBER_INT)
+        );
+        $_SESSION['shopping_cart'][0] = $item_array;
+    }
+print_r($_SESSION['shopping_cart']);
 break;
 default:
     echo "defualt";
