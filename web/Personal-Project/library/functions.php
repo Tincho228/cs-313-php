@@ -101,6 +101,9 @@ function buildCarProducts($product_data){
                                 if(isset($_SESSION['loggedin'])){
                                     $card.="<button type='submit' class='btn btn-primary'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</button>"; 
                                     $card.="<input type='hidden' name='action' value = 'addtoCart'>";
+                                    $card.="<input type='hidden' name='pr_name' value = '".$product['pr_name']."'>";
+                                    $card.="<input type='hidden' name='pr_price' value = '".$product['pr_price']."'>";
+                                    $card.="<input type='hidden' name='pr_comment' value = '".$product['pr_comment']."'>";
                                     $card.="<input type='hidden' name='pr_id' value = '".$product['pr_id']."'>";
                                     $card.="<input type='hidden' name='cl_id' value = '".$_SESSION['clientData']['cl_id']."'>";
                                 }else {
