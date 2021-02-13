@@ -50,7 +50,6 @@
                             <tr>
                                 <td colspan="3" class="text-end">Total</td>
                                 <td>$<?php echo number_format($total, 2) ?></td>
-
                             </tr>
                             <?php
                 }
