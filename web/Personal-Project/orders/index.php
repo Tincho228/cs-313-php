@@ -72,7 +72,7 @@ case 'confirmation':
     break;
 case 'clean':
     unset($_SESSION['shopping_cart']);
-    header("location ../index.php");
+    header("location: ../index.php");
     break;
 default:
     include "../views/cart.php";
