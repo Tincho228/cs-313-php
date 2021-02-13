@@ -109,8 +109,8 @@ function buildCarProducts($product_data){
                                 $card.="
                             </div>
                         </div>
-                    </div>
                     </form>
+                    </div>
                 </div>
             </div>
             </div>";
