@@ -53,6 +53,17 @@ case 'addtoCart':
     }
     header('location:../index.php');
 break;
+case 'delete':
+    foreach($_SESSION['shopping_cart'] as $key => $values){
+        if($values['pr_id'] === $_GET["pr_id"]){
+            unset($_SESSION['shopping_cart'][$key]);
+        }
+    }
+    include "..views/cart.php";
+    break;
+case 'checkout':
+    echo "checkout";
+    break
 default:
     include "../views/cart.php";
 break;

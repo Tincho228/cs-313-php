@@ -22,7 +22,7 @@
                                     <a class="nav-link" href="#">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fas fa-cart-arrow-down"></i>Cart
+                                    <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php"><i class="fas fa-cart-arrow-down"></i>Cart
                                     <span class="text-danger">
                                     <?php
                                         if(isset($_SESSION['shopping_cart'])){
