@@ -85,7 +85,6 @@ function buildCarProducts($product_data){
                                         </div>
                                     </div>
                                     <div class='col-7'>
-                                        
                                             <h5>Price</h5>
                                             <p class='display-4 text-danger'>$".$product['pr_price']."</p>
                                             <h5>Product</h5>
@@ -99,6 +98,12 @@ function buildCarProducts($product_data){
                                 <button type='button' class='btn btn-secondary'
                                     data-dismiss='modal'>Close</button>
                                 <button type='button' class='btn btn-primary'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</button> 
+                                <input type='hidden' name='action' value = 'addtoCart'>
+                                <input type='hidden' name='pr_id' value = '".$product['pr_id']."'>";
+                                if(isset($_SESSION['clientData']['cl_id'])){
+                                    $card.="<input type='hidden' name='cl_id' value = '".$_SESSION['clientData']['cl_id']."'>";
+                                }
+                                $card.="
                             </div>
                         </div>
                     </div>

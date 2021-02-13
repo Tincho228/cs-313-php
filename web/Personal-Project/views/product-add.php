@@ -38,7 +38,7 @@
             <textarea name="pr_comment" class="form-control" id="comment" cols="30" rows="5"></textarea>
         </div>
         <div class="form-group">
-            <label for="path">Product name</label>
+            <label for="path">Image path</label>
             <input type="text" class="form-control" id="path" required name="pr_path" >
         </div>
         <button type="submit" class="btn btn-dark" value="Add product">Add product</button>

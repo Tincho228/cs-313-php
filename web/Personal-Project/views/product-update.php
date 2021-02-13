@@ -38,10 +38,10 @@
             <textarea name="pr_comment" class="form-control" id="comment" cols="30" rows="5"><?php if(isset($product_detail['pr_name'])){echo $product_detail['pr_comment'];}?></textarea>
         </div>
         <div class="form-group">
-            <label for="path">Product name</label>
+            <label for="path">Image Path</label>
             <input type="text" class="form-control" id="path" required name="pr_path" value = <?php if(isset($product_detail['pr_path'])){echo $product_detail['pr_path'];}?>>
         </div>
-        <button type="submit" class="btn btn-dark" value="Add product">Add product</button>
+        <button type="submit" class="btn btn-dark" value="Add product">Modify</button>
         <!-- Add the action name - value pair -->
         <input type="hidden" name="action" value="updateProduct">
         <input type="hidden" name="pr_id" value = <?php if(isset($product_detail['pr_id'])){echo $product_detail['pr_id'];}?>>

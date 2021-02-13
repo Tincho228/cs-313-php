@@ -23,12 +23,11 @@ CREATE table public.products
 CREATE table public.orders
 (
     or_id SERIAL NOT NULL PRIMARY KEY,
-    cl_id integer,
-    pr_id integer,
     or_comment TEXT NOT NULL,
-    CONSTRAINT orders_fkey 
-    FOREIGN KEY (cl_id) 
-    REFERENCES public.clients(cl_id)
+    cl_id INT,
+    pr_id INT,
+    FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id),
+    FOREIGN KEY (pr_id) REFERENCES public.products(pr_id)
 );
 
 CREATE table public.memberships 
