@@ -63,7 +63,7 @@ case 'delete':
     break;
 case 'checkout':
     echo "checkout";
-    break
+    break;
 default:
     include "../views/cart.php";
 break;
