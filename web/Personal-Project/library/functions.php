@@ -62,6 +62,7 @@ function buildCarProducts($product_data){
                 <div class='modal fade' id='".$product['pr_name']."-card' tabindex='-1' role='dialog'
                     aria-labelledby='exampleModalLabel' aria-hidden='true'>
                     <div class='col-md-6 modal-card modal-dialog' role='document'>
+                    <form method='POST' action='../orders/index.php'>
                         <div class='modal-content'>
                             <div class='modal-header bg-dark'>
                                 <img class='navbar-logo' src='images/logo.png' alt='navbar logo'>
@@ -75,9 +76,7 @@ function buildCarProducts($product_data){
                                 <div class='row'>
                                     <div class='col-md-5 col-sm-12'>
                                         <div class='card' style='width: 18rem;'>
-                                            <img class='card-img-top'
-                                                src='".$product['pr_path']."'
-                                                alt='".$product['pr_name']." Card image Cap'>
+                                            <img class='card-img-top' src='".$product['pr_path']."' alt='".$product['pr_name']." Card image Cap'>
                                             <div class='card-body bg-dark'>
                                                 <h5 class='card-title text-light'>".$product['pr_name']."</h5>
                                                 <p class='card-text text-light'>".$product['pr_comment']."</p>
@@ -85,32 +84,33 @@ function buildCarProducts($product_data){
                                         </div>
                                     </div>
                                     <div class='col-7'>
+                                        
                                             <h5>Price</h5>
                                             <p class='display-4 text-danger'>$".$product['pr_price']."</p>
                                             <h5>Product</h5>
                                             <p>".$product['pr_name']."</p>
                                             <h5>Schedule </h5>
                                             <p>".$product['pr_comment']."</p>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                             <div class='modal-footer'>
                                 <button type='button' class='btn btn-secondary'
                                     data-dismiss='modal'>Close</button>";
-                                
-                                
                                 if(isset($_SESSION['loggedin'])){
-                                    $card.="<button type='button' class='btn btn-primary'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</button>"; 
+                                    $card.="<button type='submit' class='btn btn-primary'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</button>"; 
                                     $card.="<input type='hidden' name='action' value = 'addtoCart'>";
                                     $card.="<input type='hidden' name='pr_id' value = '".$product['pr_id']."'>";
                                     $card.="<input type='hidden' name='cl_id' value = '".$_SESSION['clientData']['cl_id']."'>";
                                 }else {
-                                    $card.="<a class='btn btn-primary href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</a>";
+                                    $card.="<a class='btn btn-primary text-light' href='https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login'><i class='fa fa-cart-arrow-down' aria-hidden='true'></i> Add to cart</a>";
                                 }
                                 $card.="
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
             </div>";
