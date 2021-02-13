@@ -13,7 +13,7 @@ session_start();
 // Get the database connection file
 // Get the database connection file
 require_once 'library/connections.php';
-//require_once '../library/functions.php';
+require_once '/library/functions.php';
 require_once 'model/products-model.php';
 
 
@@ -32,7 +32,8 @@ switch ($action){
     default:
     $product_data = getProductList();
     print_r($product_data);
-    //$product_cards = buildCarProducts($product_data);*/
+    $product_cards = buildCarProducts($product_data);
+    echo $product_cards;
     //require $_SERVER["DOCUMENT_ROOT"]."/Personal-Project/views/home.php";
      break;
  }
