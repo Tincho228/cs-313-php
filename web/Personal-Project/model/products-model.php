@@ -101,5 +101,25 @@ function updateProduct($pr_id, $pr_name, $pr_price, $pr_comment, $pr_path){
     // Return the indication of success (rows changed)
     return $rowsChanged;
 }
+function getProductsByClient(){
+    // Create a connection object using the phpmotors connection function
+    $db = herokuConnection();
+    // The SQL statement
+    $cl_id = $_SESSION['clientData']['cl_id'];
+    $sql = 'SELECT orders.cl_id, products.pr_name, products.pr_price, products.pr_comment FROM orders JOIN products ON orders.pr_ir = products.pr_id WHERE cl_id = :cl_id';
+    // Create the prepared statement using the phpmotors connection
+    $stmt = $db->prepare($sql);
+    // The next four lines replace the placeholders in the SQL
+    // statement with the actual values in the variables
+    // and tells the database the type of data it is
+    $stmt->bindValue(':cl_id', $cl_id, PDO::PARAM_INT);
+    // Insert the data
+    $stmt->execute();
+    // We expect a single record to be returned, thus the use of the fetch() method.
+    $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Close the database interaction
+    $stmt->closeCursor();
+    return $clientData;
+}
 
 ?>

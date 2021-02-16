@@ -38,6 +38,11 @@
         <p>Membership not activated</p>
         <hr>
         <h3>My products</h3>
+        <?php
+            if(isset($myproducts)){
+                echo $myproducts;
+            }
+        ?>
 
     </div>
 </main>

@@ -237,8 +237,10 @@ switch ($action){
             }
             break;
     default:
-            
-        include "../views/admin.php";
+        $productsByClient = getProductsByClient();    
+        print_r($productsByClient);
+        //$myproducts = buildmyproducts($productsByClient);
+        //include "../views/admin.php";
         break;
  }
  ?>

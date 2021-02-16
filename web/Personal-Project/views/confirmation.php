@@ -20,7 +20,7 @@
     <div class="container">
         <div class="container-fluid bg-light">
             <div class="col">
-                <img src="../images/purchase.jpg" alt="image of purchase">
+                <img src="../images/purchase.jpg" style="width:25%;display:block;margin:auto;" alt="image of purchase">
                 <h1>Your order just send</h1>
             </div>
         <div>
