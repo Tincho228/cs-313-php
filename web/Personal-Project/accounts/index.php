@@ -239,10 +239,8 @@ switch ($action){
             break;
     default:
         $productsByClient = getProductsByClient();
-        print_r($productsByClient);  
         $myproducts = buildmyproducts($productsByClient);
-        echo $myproducts;
-        //include "../views/admin.php";
+        include "../views/admin.php";
         break;
  }
  ?>
