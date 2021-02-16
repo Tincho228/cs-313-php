@@ -15,6 +15,7 @@ require_once '../library/connections.php';
 //require_once '../model/accounts-model.php';
 //require_once '../model/products-model.php';
 require_once '../model/orders-model.php';
+require_once '../model/memberships-model.php';
 
 $action = filter_input(INPUT_POST, 'action');
  if ($action == NULL){

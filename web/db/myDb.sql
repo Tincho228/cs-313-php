@@ -36,7 +36,9 @@ CREATE table public.memberships
     mem_Status BOOLEAN NOT NULL DEFAULT '0', 
     mem_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     cl_id INT,	
-    FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id)
+    pr_id INT,
+    FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id);
+    FOREIGN KEY (pr_id) REFERENCES public.products(pr_id)
 );
 CREATE table public.reviews
 (

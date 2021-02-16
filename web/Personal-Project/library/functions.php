@@ -144,5 +144,32 @@ function buildmyproducts($productsByClient){
                         $list.= '</table></div></div>';
                         return $list;
 }
-
+function builMemList($dataMem){
+    $list ='<div class="col bg-summary">
+                    <div class="table-responsive">
+                         <table class="table table-stripped">
+                        <tr class="text-primary">
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>';
+                        foreach($dataMem as $values){
+                        $list.='
+                        <tr>
+                            <td>'.$values['cl_fisrtname'].'</td>
+                            <td>'.$values['cl_lastname'].'</td>
+                            <td>'.$values['cl_email'].'</td>
+                            <td>'.$values['cl_phone'].'</td>
+                            <td>'.$values['mem_date'].'</td>
+                            <td>'.$values['mem_status'].'</td>
+                            <td>'.$values['cl_email'].'</td>
+                        </tr>';
+                        }
+                        $list.= '</table></div></div>';
+                        return $list;
+}
 ?>
