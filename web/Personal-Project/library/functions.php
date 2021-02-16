@@ -140,7 +140,7 @@ function buildmyproducts($productsByClient){
                             <td><'.$values['products.pr_comment'].'</td>
                             <td>$ '.$values['pr_price'].'</td>
                         </tr>';
-                        };
+                        }
                         $list.= '</table></div></div>';
                         return $list;
 }
