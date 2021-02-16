@@ -241,6 +241,7 @@ switch ($action){
         $productsByClient = getProductsByClient();
         print_r($productsByClient);  
         $myproducts = buildmyproducts($productsByClient);
+        echo $myproducts;
         //include "../views/admin.php";
         break;
  }
