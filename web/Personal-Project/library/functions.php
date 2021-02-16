@@ -128,7 +128,7 @@ function buildmyproducts($productsByClient){
     $list ='<div class="col bg-summary">
                     <div class="table-responsive">
                          <table class="table table-stripped">
-                        <tr>
+                        <tr class="text-primary">
                             <th>Product name</th>
                             <th>Comment</th>
                             <th>Price</th>

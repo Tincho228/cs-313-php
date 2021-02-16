@@ -68,6 +68,8 @@ case 'checkout':
 case 'confirmation':
     $shopping_cart = $_SESSION['shopping_cart']; 
     regShoppingCart($shopping_cart); 
+    //it send admission to the administrator.
+    createMembership();
     include "../views/confirmation.php";
     break;
 case 'clean':

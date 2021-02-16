@@ -32,14 +32,11 @@ CREATE table public.orders
 CREATE table public.memberships 
 (
     mem_id SERIAL NOT NULL PRIMARY KEY,
-    mem_link VARCHAR(50) NOT NULL,
-    mem_Status BOOLEAN NOT NULL, 
-    mem_date TIMESTAMP NOT NULL,
+    mem_link VARCHAR(50) NOT NULL DEFAULT 'join',
+    mem_Status BOOLEAN NOT NULL DEFAULT '0', 
+    mem_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     cl_id INT,	
-    pr_id INT,
-    FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id),
-    FOREIGN KEY(pr_id) REFERENCES products(pr_id)
-
+    FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id)
 );
 CREATE table public.reviews
 (

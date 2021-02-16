@@ -16,14 +16,14 @@
     include "../common/header.php";
 ?>
 <main>
-    <div class="container">
-        
+    <div class="container" style="margin-top:30px 0px;">
+         
         <h3>My account Details</h3>
         <?php
         if (isset($_SESSION['message'])) {
         echo $_SESSION['message'];
         } ?>
-        <ul class="list-group">
+        <ul class="list-group" style="margin:20px;">
             <li class="list-group-item">Name: <?php if(isset($_SESSION['clientData']['cl_firstname'])){echo $_SESSION['clientData']['cl_firstname'];}?></li>
             <li class="list-group-item">Last name: <?php if(isset($_SESSION['clientData']['cl_lastname'])){echo $_SESSION['clientData']['cl_lastname'];}?></li>
             <li class="list-group-item">Email: <?php if(isset($_SESSION['clientData']['cl_email'])){echo $_SESSION['clientData']['cl_email'];}?></li>
@@ -31,13 +31,10 @@
         </ul>
 
         <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=updateClient"><i class="fa fa-pencil" aria-hidden="true"></i>Modify account</a> 
-        <hr>
-        <h3>My reviews</h3>
-        <hr>
+        <h3 style="margin-bottom:20px;">My reviews</h3>
         <h3>Membership Details</h3>
-        <p>Membership not activated</p>
-        <hr>
-        <h3>My products</h3>
+        <p style="margin:20px;">Membership not activated</p>
+        <h3 style="margin-bottom:20px;">My products</h3>
         <?php
             if(isset($myproducts)){
                 echo $myproducts;
