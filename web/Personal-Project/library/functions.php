@@ -124,6 +124,25 @@ function buildCarProducts($product_data){
     return $card;
 }
 
-
+function buildmyproducts($productsByClient){
+    $list ='<div class="col bg-summary">
+                    <div class="table-responsive">
+                         <table class="table table-stripped">
+                        <tr>
+                            <th>Product name</th>
+                            <th>Comment</th>
+                            <th>Price</th>
+                        </tr>';
+                        foreach($productsByClient as $values){
+                        $list.='
+                        <tr>
+                            <td><'.$values['pr_name'].'</td>
+                            <td><'.$values['pr_comment'].'</td>
+                            <td>$ <'.$values['pr_price'].'</td>
+                        </tr>';
+                        };
+                        $list.= '</table></div></div>';
+                        return $list;
+}
 
 ?>

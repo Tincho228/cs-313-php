@@ -116,7 +116,7 @@ function getProductsByClient(){
     // Insert the data
     $stmt->execute();
     // We expect a single record to be returned, thus the use of the fetch() method.
-    $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+    $clientData = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // Close the database interaction
     $stmt->closeCursor();
     return $clientData;
