@@ -138,7 +138,7 @@ function buildmyproducts($productsByClient){
                         <tr>
                             <td><'.$values['pr_name'].'</td>
                             <td><'.$values['pr_comment'].'</td>
-                            <td>$ '.$values['pr_price'].'</td>
+                            <td><$ '.$values['pr_price'].'</td>
                         </tr>';
                         }
                         $list.= '</table></div></div>';
