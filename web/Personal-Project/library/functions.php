@@ -136,8 +136,8 @@ function buildmyproducts($productsByClient){
                         foreach($productsByClient as $values){
                         $list.='
                         <tr>
-                            <td><'.$values['products.pr_name'].'</td>
-                            <td><'.$values['products.pr_comment'].'</td>
+                            <td><'.$values['pr_name'].'</td>
+                            <td><'.$values['pr_comment'].'</td>
                             <td>$ '.$values['pr_price'].'</td>
                         </tr>';
                         }
