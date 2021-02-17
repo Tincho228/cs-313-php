@@ -149,10 +149,7 @@ function buildMemList($dataMem){
                     <div class="table-responsive">
                          <table class="table table-stripped">
                         <tr class="text-primary">
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
+                            <th>Personal info</th>
                             <th>Date</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -161,16 +158,22 @@ function buildMemList($dataMem){
                         foreach($dataMem as $values){
                         $list.='
                         <tr>
-                            <td>'.$values['cl_fisrtname'].'</td>
-                            <td>'.$values['cl_lastname'].'</td>
-                            <td>'.$values['cl_email'].'</td>
-                            <td>'.$values['cl_phone'].'</td>
-                            <td>'.$values['mem_date'].'</td>
-                            <td>'.$values['mem_status'].'</td>
-                            <td><a class="text-success" href="../memberships/index.php?action=activate&mem_id='.urlencode($values['mem_id']).'">Activate</a></td>
-                            <td><a class="text-danger" href="../memberships/index.php?action=deactivate&mem_id='.urlencode($values['mem_id']).'">Eliminate</a></td>
-                            <td><a class="text-danger" href="../memberships/index.php?action=eliminate&mem_id='.urlencode($values['mem_id']).'">Deactivate</a></td>
-                            <td>'.$values['cl_email'].'</td>
+                            <td><ul><li>'.$values['cl_fisrtname'].' '.$values['cl_lastname'].'</li>
+                                    <li>'.$values['cl_email'].'</li>
+                                    <li>'.$values['cl_phone'].'</li></ul></td>
+
+                            <td>'.$values['mem_date'].'</td>';
+                            if($values['mem_status'] === 0){
+                                $list.='<td class="text-danger">Deactivated</td>
+                                        <td><a class="text-success" href="../memberships/index.php?action=activate
+                                        &mem_id='.urlencode($values['mem_id']).'">Activate</a></td>';
+                            }else {
+                                $list.='<td class="text-success">Activated</td>
+                                        <td><a class="text-danger" href="../memberships/index.php?action=eliminate
+                                        &mem_id='.urlencode($values['mem_id']).'">Deactivate</a></td>';
+                            }
+                            $list.='<td><a href="../memberships/index.php?action=deactivate
+                            &mem_id='.urlencode($values['mem_id']).'">Eliminate</a></td>
                         </tr>';
                         }
                         $list.= '</table></div></div>';
