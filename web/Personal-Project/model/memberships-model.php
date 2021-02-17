@@ -33,5 +33,38 @@ function getMemData(){
     $stmt->closeCursor();
     return $clientData;
    } 
+function activateMem($mem_id){
+    $db = herokuConnection();
+    // The SQL statement
+    $sql = 'UPDATE public.memberships SET mem_status = TRUE WHERE mem_id = :mem_id';
+    // Create the prepared statement using the phpmotors connection
+    $stmt = $db->prepare($sql);
 
+    $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);  
+    // Insert the data
+    $stmt->execute();
+    // Ask how many rows changed as a result of our insert
+    $rowsChanged = $stmt->rowCount();
+    // Close the database interaction
+    $stmt->closeCursor();
+    // Return the indication of success (rows changed)
+    return $rowsChanged;
+}
+function deactivateMem($mem_id){
+    $db = herokuConnection();
+    // The SQL statement
+    $sql = 'UPDATE public.memberships SET mem_status = FALSE WHERE mem_id = :mem_id';
+    // Create the prepared statement using the phpmotors connection
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':mem_id', $mem_id, PDO::PARAM_INT);  
+    // Insert the data
+    $stmt->execute();
+    // Ask how many rows changed as a result of our insert
+    $rowsChanged = $stmt->rowCount();
+    // Close the database interaction
+    $stmt->closeCursor();
+    // Return the indication of success (rows changed)
+    return $rowsChanged;
+}
 ?>

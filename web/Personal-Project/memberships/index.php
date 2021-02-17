@@ -24,10 +24,31 @@ $action = filter_input(INPUT_POST, 'action');
 // Check if the firstname cookie exists, get its value
 switch ($action){
 case 'activate':
-    
+    $mem_id = filter_input(INPUT_POST, 'mem_id', FILTER_SANITIZE_NUMBER_INT);
+    // send data to model
+    $outcome = activateMem($mem_id);
+    if ($outcome === 1) {
+        $_SESSION['message'] = '<p>Membership activated.</p>';
+        header('location:index.php');
+        exit;  
+    } else {
+        $_SESSION['message'] = '<p>Sorry, the operation failed. Please try again.</p>';
+        include "../views/memberships.php";
+        exit;
+    }
     break;
 case 'deactivate':
-   
+    $mem_id = filter_input(INPUT_POST, 'mem_id', FILTER_SANITIZE_NUMBER_INT);
+    $outcome = deactivateMem($mem_id);
+    if ($outcome === 1) {
+        $_SESSION['message'] = '<p>Membership deactivated.</p>';
+        header('location:index.php');
+        exit;  
+    } else {
+        $_SESSION['message'] = '<p>Sorry, the operation failed. Please try again.</p>';
+        include "../views/memberships.php";
+        exit;
+    }
     break;
 case 'eliminate':
     
