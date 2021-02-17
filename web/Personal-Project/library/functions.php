@@ -163,7 +163,7 @@ function buildMemList($dataMem){
                                     <li>'.$values['cl_phone'].'</li></ul></td>
 
                             <td>'.$values['mem_date'].'</td>';
-                            if($values['mem_status'] === 0){
+                            if($values['mem_status'] === FALSE){
                                 $list.='<td class="text-danger">Deactivated</td>
                                         <td><a class="text-success" href="../memberships/index.php?action=activate
                                         &mem_id='.urlencode($values['mem_id']).'">Activate</a></td>';

@@ -21,7 +21,7 @@ function getMemData(){
     // Create a connection object using the phpmotors connection function
     $db = herokuConnection();
     // The SQL statement
-    $sql = 'SELECT clients.cl_email,clients.cl_firstname,clients.cl_lastname,memberships.mem_id, memberships.mem_status, memberships.mem_date FROM clients JOIN memberships ON clients.cl_id = memberships.cl_id';
+    $sql = 'SELECT clients.cl_firstname,clients.cl_lastname,clients.cl_email,clients.cl_phone,memberships.mem_id, memberships.mem_status, memberships.mem_date FROM clients JOIN memberships ON clients.cl_id = memberships.cl_id';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
     // Insert the data
