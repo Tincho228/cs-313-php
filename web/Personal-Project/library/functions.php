@@ -144,12 +144,13 @@ function buildmyproducts($productsByClient){
                         $list.= '</table></div></div>';
                         return $list;
 }
-function buildMemList($dataMem){
+function buildMemList($dataMem,$dataProd){
     $list ='<div class="col bg-summary">
                     <div class="table-responsive">
                          <table class="table table-stripped">
                         <tr class="text-primary">
                             <th>Personal info</th>
+                            <th>Product info</th>
                             <th>Date</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -158,10 +159,18 @@ function buildMemList($dataMem){
                         foreach($dataMem as $values){
                         $list.='
                         <tr>
-                            <td><ul><li>'.$values['cl_fisrtname'].' '.$values['cl_lastname'].'</li>
+                            <!-- Personal info-->
+                            <td><ul><li>'.$values['cl_firstname'].' '.$values['cl_lastname'].'</li>
                                     <li>'.$values['cl_email'].'</li>
                                     <li>'.$values['cl_phone'].'</li></ul></td>
+                            <!-- Product info-->';
+                            foreach($dataProd as $row){
+                                if($values['cl_id']===$row['cl_id']){
+                                    $list.='<ul><li>'.$row['pr_name'].'</li></ul>';
+                                }
+                            }
 
+                        $list.='
                             <td>'.$values['mem_date'].'</td>';
                             if($values['mem_status'] === FALSE){
                                 $list.='<td class="text-danger">Deactivated</td>

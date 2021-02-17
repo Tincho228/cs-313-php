@@ -13,7 +13,7 @@ session_start();
 require_once '../library/connections.php';
 require_once '../library/functions.php';
 //require_once '../model/accounts-model.php';
-//require_once '../model/products-model.php';
+require_once '../model/products-model.php';
 require_once '../model/memberships-model.php';
 
 $action = filter_input(INPUT_POST, 'action');
@@ -33,8 +33,9 @@ case 'eliminate':
     
     break;
 default:
+    $dataProd = getAllproducts();
     $dataMem = getMemData();
-    $memList = buildMemList($dataMem);
+    $memList = buildMemList($dataMem,$dataProd);
     include "../views/memberships.php";
 break;
 }
