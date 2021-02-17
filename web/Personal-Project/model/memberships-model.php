@@ -36,7 +36,7 @@ function getMemData(){
 function activateMem($mem_id){
     $db = herokuConnection();
     // The SQL statement
-    $sql = 'UPDATE public.memberships SET mem_status = 1 WHERE mem_id = :mem_id';
+    $sql = 'UPDATE public.memberships SET mem_status = TRUE WHERE mem_id = :mem_id';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
 
@@ -53,7 +53,7 @@ function activateMem($mem_id){
 function deactivateMem($mem_id){
     $db = herokuConnection();
     // The SQL statement
-    $sql = 'UPDATE public.memberships SET mem_status = 0 WHERE mem_id = :mem_id';
+    $sql = 'UPDATE public.memberships SET mem_status = FALSE WHERE mem_id = :mem_id';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
 
