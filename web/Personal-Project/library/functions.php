@@ -172,7 +172,9 @@ function buildMemList($dataMem,$dataProd){
                                 }
                             }
                         $list.='</ul></td>
-                            <td>'.$dataMem['mem_date'].'</td>';
+                            <td>';
+                            $stdrdate = date("F d, Y h:i A", strtotime($values['mem_date']));
+                            $list.= $stdrdate.'</td>';
                             if($values['mem_status'] === FALSE){
                                 $list.='<td class="text-danger">Deactivated</td>
                                         <td><a class="text-success" href="../memberships/index.php?action=activate
