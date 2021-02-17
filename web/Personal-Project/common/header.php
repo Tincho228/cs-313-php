@@ -15,9 +15,16 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php">Products</a>
-                                </li>
+                                <?php
+                                if(isset($_SESSION['loggedin']) && ($_SESSION['clienData']['cl_level'] === 3)){
+                                    echo '
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php">Products</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/memberships/index.php">Memberships</a>
+                                            </li>';
+                                ?>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contact Us</a>
                                 </li>
@@ -72,7 +79,7 @@
                 </nav>
                 <div class="jumbotron jumbotron-fluid bg-transparent">
                     <div class="container">
-                        <h1 class="display-3 text-light hero-title">MAFUBA GYM and FITNESS</h1>
+                        <h1 class="display-3 text-light hero-title">MAFUBA GYM & FITNESS</h1>
                         <p class="lead text-light">The perfect exercise for you</p>
                         <hr class="my-2">
                         <p class="text-light">Log in and start now!</p>

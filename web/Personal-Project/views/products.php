@@ -17,7 +17,7 @@
     include "../common/header.php";
 ?>
 <main>
-    <div class="container">
+    <div class="container" style="margin-top:30px; margin-bottom:30px;">
         <?php
         if (isset($product_list)) {
         echo $product_list;
