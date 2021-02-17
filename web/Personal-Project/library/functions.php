@@ -168,7 +168,7 @@ function buildMemList($dataMem,$dataProd){
                             <td><ul>';
                             foreach($dataProd as $row){
                                 if($values['cl_id']===$row['cl_id']){
-                                    $list.='<li>'.$row['pr_name'].'</li>';
+                                    $list.='<li>'.$row['pr_name'].' $ '.$row['pr_price'].'</li>';
                                 }
                             }
                         $list.='</ul></td>
