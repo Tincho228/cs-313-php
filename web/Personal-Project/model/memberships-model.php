@@ -77,4 +77,21 @@ function eliminateMem($cl_id){
     $stmt->closeCursor();
     return $rowsChanged;
 }
+function getMembershipStatus(){
+    $cl_id = $_SESSION['clientData']['cl_id'];
+    // Create a connection object using the phpmotors connection function
+    $db = herokuConnection();
+    // The SQL statement
+    $sql = 'SELECT mem_status FROM memberships WHERE cl_id = :cl_id';
+    // Create the prepared statement using the phpmotors connection
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':cl_id', $cl_id, PDO::PARAM_INT);
+    // Insert the data
+    $stmt->execute();
+    // We expect a single record to be returned, thus the use of the fetch() method.
+    $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+    // Close the database interaction
+    $stmt->closeCursor();
+    return $clientData;
+}
 ?>

@@ -22,7 +22,7 @@
                                     <a class="nav-link" href="#">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php"><i class="fas fa-cart-arrow-down"></i>Cart
+                                    <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php"><i class="fas fa-cart-arrow-down"></i> Cart
                                     <span class="text-danger">
                                     <?php
                                         if(isset($_SESSION['shopping_cart'])){
@@ -56,11 +56,11 @@
                         <?php
                             // if is not logged in show My Account
                             if(!isset($_SESSION['loggedin'])){
-                                echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
+                                echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i> Log In</a>';
                             } elseif($_SESSION['loggedin']){
                                 echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=Logout" title="logout"><i class="fa fa-user" aria-hidden="true"></i> Logout </a>';
                             } else {
-                                echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a>';
+                                echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i> Log In</a>';
                                 }
                             ?>
                         

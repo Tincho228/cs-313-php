@@ -33,7 +33,17 @@
         <a class="btn btn-dark" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=updateClient"><i class="fa fa-pencil" aria-hidden="true"></i>Modify account</a> 
         <h3 style="margin-bottom:20px;">My reviews</h3>
         <h3>Membership Details</h3>
-        <p style="margin:20px;">Membership not activated</p>
+        <?php
+            if(isset($memStatus)){
+                if($memStatus === TRUE){
+                    echo '<p class="text-success" style="margin:20px;">Membership Activated</p>'; 
+                }else {
+                    echo '<p class="text-danger" style="margin:20px;">Membership not Activated</p>'; 
+                }
+            }else {
+                echo '<p class="text-danger" style="margin:20px;">Membership not activated</p>';
+            }
+        ?>
         <h3 style="margin-bottom:20px;">My products</h3>
         <?php
             if(isset($myproducts)){
