@@ -184,8 +184,8 @@ function buildMemList($dataMem,$dataProd){
                             }
                             $list.='<td>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#example'.$values['mem_id'].'">
-                            Launch demo modal
+                            <button type="button" class="btn btn-dark"  style="padding-top:0px;padding-bottom:0px;" data-toggle="modal" data-target="#example'.$values['mem_id'].'">
+                            Eliminate
                             </button>
 
                             <!-- Modal -->
@@ -199,7 +199,7 @@ function buildMemList($dataMem,$dataProd){
                                           </button>
                                         </div>
                                         <div class="modal-body">
-                                            ...
+                                            <h3>Do you want to eliminate'.$values['cl_firstname'].' membership?</h3>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
