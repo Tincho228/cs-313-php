@@ -125,14 +125,12 @@ function getAllproducts(){
     // Create a connection object using the phpmotors connection function
     $db = herokuConnection();
     // The SQL statement
-    $cl_id = $_SESSION['clientData']['cl_id'];
     $sql = 'SELECT orders.cl_id, products.pr_name, products.pr_price, products.pr_comment FROM orders JOIN products ON orders.pr_id = products.pr_id';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
     // statement with the actual values in the variables
     // and tells the database the type of data it is
-    $stmt->bindValue(':cl_id', $cl_id, PDO::PARAM_INT);
     // Insert the data
     $stmt->execute();
     // We expect a single record to be returned, thus the use of the fetch() method.
