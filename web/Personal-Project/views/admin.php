@@ -34,8 +34,8 @@
         <h3 style="margin-bottom:20px;">My reviews</h3>
         <h3>Membership Details</h3>
         <?php
-            if(isset($memStatus)){
-                if($memStatus === TRUE){
+            if(isset($memStatus['mem_status'])){
+                if($memStatus['mem_status'] === TRUE){
                     echo '<p class="text-success" style="margin:20px;">Membership Activated</p>'; 
                 }else {
                     echo '<p class="text-danger" style="margin:20px;">Membership not Activated</p>'; 
