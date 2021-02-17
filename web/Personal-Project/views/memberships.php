@@ -16,7 +16,7 @@
 <?php
     include "../common/header.php";
 ?>
-<div class="container">
+<div class="container" style="margin: 20px 0px;">
     <h2>Memberships status</h2>
     <?php
     if(isset($memList)){
