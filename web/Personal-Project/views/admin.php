@@ -36,7 +36,7 @@
         <?php
             if(isset($memStatus['mem_status'])){
                 if($memStatus['mem_status'] === TRUE){
-                    echo '<p class="text-success" style="margin:20px;">Membership Activated</p>'; 
+                    echo '<p class="text-success" style="margin:20px;">Membership Activated - Date: '.$memStatus['mem_date'].'</p>'; 
                 }else {
                     echo '<p class="text-danger" style="margin:20px;">Membership not Activated</p>'; 
                 }

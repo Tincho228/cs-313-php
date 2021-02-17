@@ -82,7 +82,7 @@ function getMembershipStatus(){
     // Create a connection object using the phpmotors connection function
     $db = herokuConnection();
     // The SQL statement
-    $sql = 'SELECT mem_status FROM memberships WHERE cl_id = :cl_id';
+    $sql = 'SELECT mem_status,mem_date FROM memberships WHERE cl_id = :cl_id';
     // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':cl_id', $cl_id, PDO::PARAM_INT);
