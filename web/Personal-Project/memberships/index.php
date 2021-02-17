@@ -33,7 +33,7 @@ case 'activate':
         exit;  
     } else {
         $_SESSION['message'] = '<p>Sorry, the operation failed. Please try again.</p>';
-        include "../views/memberships.php";
+        header('location:index.php');
         exit;
     }
     break;
@@ -46,7 +46,7 @@ case 'deactivate':
         exit;  
     } else {
         $_SESSION['message'] = '<p>Sorry, the operation failed. Please try again.</p>';
-        include "../views/memberships.php";
+        header('location:index.php');
         exit;
     }
     break;
