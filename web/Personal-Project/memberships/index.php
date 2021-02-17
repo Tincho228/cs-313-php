@@ -51,7 +51,18 @@ case 'deactivate':
     }
     break;
 case 'eliminate':
-    
+    $cl_id = filter_input(INPUT_GET, 'mem_id', FILTER_SANITIZE_NUMBER_INT);
+    $outcome = eliminateMem($cl_id);
+    if ($outcome === 1) {
+        $_SESSION['message'] = '<p>Membership eliminated.</p>';
+        header('location:index.php');
+        exit;  
+    } else {
+        $_SESSION['message'] = '<p>Sorry, the operation failed. Please try again.</p>';
+        header('location:index.php');
+        exit;
+    }
+    break;
     break;
 default:
     $dataProd = getAllproducts();

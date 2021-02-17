@@ -67,4 +67,14 @@ function deactivateMem($mem_id){
     // Return the indication of success (rows changed)
     return $rowsChanged;
 }
+function eliminateMem($cl_id){
+    $db = herokuConnection();
+    $sql ='DELETE FROM public.clients WHERE cl_id = :cl_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':cl_id', $cl_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
 ?>

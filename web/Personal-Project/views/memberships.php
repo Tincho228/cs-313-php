@@ -19,6 +19,11 @@
 <div class="container" style="margin-top: 20px;">
     <h2>Memberships status</h2>
     <?php
+    if(isset($_SESSION['message'])){
+        echo '<p class="text-danger">'.$_SESSION['message'].'</p>';
+    }
+    ?>
+    <?php
     if(isset($memList)){
         echo $memList;
     }
