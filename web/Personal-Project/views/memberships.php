@@ -18,7 +18,11 @@
 ?>
 <div class="container">
     <h2>Memberships status</h2>
-  
+    <?php
+    if(isset($memList)){
+        echo $memList;
+    }
+    ?>
 </div>
 <?php
     include "../common/footer.php";

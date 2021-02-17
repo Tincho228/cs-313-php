@@ -26,14 +26,11 @@ switch ($action){
 case 'activate':
     
     break;
-case 'diactivate':
+case 'deactivate':
    
     break;
-case 'delete':
+case 'eliminate':
     
-    break;
-case 'confirmation':
-   
     break;
 default:
     $dataMem = getMemData();
