@@ -164,13 +164,14 @@ function buildMemList($dataMem,$dataProd){
                                     <li>'.$values['cl_email'].'</li>
                                     <li>'.$values['cl_phone'].'</li></ul></td>
                             <!-- Product info-->';
+                        $list.='
+                            <td><ul>';
                             foreach($dataProd as $row){
                                 if($values['cl_id']===$row['cl_id']){
-                                    $list.='<ul><li>'.$row['pr_name'].'</li></ul>';
+                                    $list.='<li>'.$row['pr_name'].'</li>';
                                 }
                             }
-
-                        $list.='
+                        $list.='</ul></td>
                             <td>'.$values['mem_date'].'</td>';
                             if($values['mem_status'] === FALSE){
                                 $list.='<td class="text-danger">Deactivated</td>
