@@ -1,14 +1,12 @@
 <?php
 function createMembership(){
     $db = herokuConnection(); 
-    $pr_id = $_SESSION['shopping_cart']['pr_id'];
     $cl_id = $_SESSION['clientData']['cl_id'];
-    $sql = 'INSERT INTO public.memberships (cl_id, pr_id) VALUES (:cl_id, :pr_id)';
+    $sql = 'INSERT INTO public.memberships (cl_id) VALUES (:cl_id)';
         // Create the prepared statement using the phpmotors connection
     $stmt = $db->prepare($sql);    
         //  Binding values
     $stmt->bindValue(':cl_id', $cl_id, PDO::PARAM_INT);
-    $stmt->bindValue(':pr_id', $pr_id, PDO::PARAM_INT);
         // Insert the data
     $stmt->execute();
     // Ask how many rows changed as a result of our insert
