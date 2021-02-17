@@ -199,11 +199,11 @@ function buildMemList($dataMem,$dataProd){
                                           </button>
                                         </div>
                                         <div class="modal-body">
-                                            <h3>Do you want to eliminate'.$values['cl_firstname'].' membership?</h3>
+                                            <h3>Do you want to eliminate '.$values['cl_firstname'].' membership?</h3>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                            <a href="../memberships/index.php?action=eliminate&mem_id='.urlencode($values['cl_id']).'">Eliminate</a>
+                                            <a class="btn btn-primary" href="../memberships/index.php?action=eliminate&mem_id='.urlencode($values['cl_id']).'">Eliminate</a>
                                         </div>
                                     </div>
                                 </div>
