@@ -16,7 +16,7 @@
     include "../common/header.php";
 ?>
 <main>
-    <div class="container" style="margin-top:30px 0px;">
+    <div class="container" style="margin-top:30px; margin-bottom:30px;">
          
         <h3>My account Details</h3>
         <?php
@@ -36,7 +36,8 @@
         <?php
             if(isset($memStatus['mem_status'])){
                 if($memStatus['mem_status'] === TRUE){
-                    echo '<p class="text-success" style="margin:20px;">Membership Activated - Date: '.$memStatus['mem_date'].'</p>'; 
+                    $stdrdate = date("F d, Y h:i A", strtotime($memStatus['mem_date']));
+                    echo '<p class="text-success" style="margin:20px;">Membership Activated - Date: '.$stdrdate.'</p>'; 
                 }else {
                     echo '<p class="text-danger" style="margin:20px;">Membership not Activated</p>'; 
                 }
