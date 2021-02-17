@@ -17,7 +17,6 @@ function createMembership(){
     return $rowsChanged;
 }
 
-
 function getMemData(){
     // Create a connection object using the phpmotors connection function
     $db = herokuConnection();

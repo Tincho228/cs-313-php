@@ -37,7 +37,7 @@ case 'confirmation':
     break;
 default:
     $dataMem = getMemData();
-    $memList = builMemList($dataMem);
+    $memList = buildMemList($dataMem);
     include "../views/memberships.php";
 break;
 }
