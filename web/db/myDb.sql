@@ -38,6 +38,17 @@ CREATE table public.memberships
     cl_id INT,	
     FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id) ON DELETE CASCADE
 );
+
+CREATE table public.contact_us
+(
+    cus_id SERIAL NOT NULL PRIMARY KEY,
+    cus_name VARCHAR(50) NOT NULL,
+    cus_phone INT NOT NULL,
+    cus_mail VARCHAR(50) NOT NULL,
+    cus_body TEXT NOT NULL,
+    cus_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE table public.reviews
 (
     rev_id SERIAL NOT NULL PRIMARY KEY,
@@ -59,17 +70,6 @@ CREATE table public.mails
     mail_date TIMESTAMP NOT NULL,
     mem_id INT,
     FOREIGN KEY (mem_id) REFERENCES public.memberships(mem_id)
-);
-
-
-CREATE table public.contact_us
-(
-    cus_id SERIAL NOT NULL PRIMARY KEY,
-    cus_name VARCHAR(50) NOT NULL,
-    cus_phone INT NOT NULL,
-    cus_mail VARCHAR(50) NOT NULL,
-    cus_body TEXT NOT NULL,
-    cus_date TIMESTAMP NOT NULL
 );
 
 CREATE table public.instructors

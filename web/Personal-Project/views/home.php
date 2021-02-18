@@ -326,38 +326,33 @@
                     </div>
                 </div>
             </section>
-            <section class="free-class"> 
+            <section class="free-class" id="contactUs"> 
                 <div class="container-fluid free-class-bg-image">
                     <div class="container">
                     <div class="row">
                         <div class="col section-padding ">
                         </div>
                         <div class="col-md-6 col-sm-12 section-padding">
-                            <form class="bg-free-class-form">
+                            <form method="POST" action="../mails/index.php" class="bg-free-class-form">
                                 <h1 class="text-center text-light">Message Us For a 1 on 1 Coaching Session!</h1>
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter name" required name="cus_name">
+                                    <input type="text" class="form-control" id="name" required name="cus_name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter email">
-                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                        anyone else.</small>
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" required name="cus_email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="number">Cell Phone</label>
-                                    <input type="number" class="form-control" id="exampleInputPassword1"
-                                        placeholder="cell phone" name="cus_phone">
+                                    <label for="phone">Cell Phone</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" required name="cus_phone">
                                 </div>
                                 <div class="form-group">
                                     <label for="commment">Message</label>
-                                    <textarea class="form-control" name="cus_body" id="comment" cols="30" rows="10"
-                                        placeholder="Write your message"></textarea>
+                                    <textarea class="form-control" name="cus_body" id="comment" cols="30" rows="10" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-light">Send message</button>
+                                <input type="hidden" name="action" value="inbox">
                             </form>
                         </div>
                         </div>

@@ -1,3 +1,7 @@
+
+html {
+    scroll-behavior: smooth;
+}
 .container-hero-image {
     background-image: url("images/hero-image.jpg");
     background-size: cover;

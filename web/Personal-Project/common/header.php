@@ -14,7 +14,8 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project">Home</a></li>
                                 <?php
-                                if(isset($_SESSION['loggedin']) && ($_SESSION['clienData']['cl_level'] === 3)){
+                                if($_SESSION['loggedin']){
+                                    if($_SESSION['clienData']['cl_level'] > 2){
                                     echo '
                                             <li class="nav-item">
                                                 <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php">Products</a>
@@ -22,9 +23,10 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/memberships/index.php">Memberships</a>
                                             </li>';
+                                    } 
                                 }
                                 ?>
-                                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a>
+                                <li class="nav-item"><a class="nav-link" href="#contactUs">Contact Us</a>
                                 </li><li class="nav-item">
                                     <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php"><i class="fas fa-cart-arrow-down"></i> Cart
                                     <span class="text-danger">
