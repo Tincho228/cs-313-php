@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+    if(!isset($_SESSION['loggedin'])){
+        header("location: ../accounts/index.php?action=login");
+    }
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>

@@ -39,7 +39,7 @@ CREATE table public.memberships
     FOREIGN KEY (cl_id) REFERENCES public.clients(cl_id) ON DELETE CASCADE
 );
 
-CREATE table public.contact_us
+CREATE table public.contactus
 (
     cus_id SERIAL NOT NULL PRIMARY KEY,
     cus_name VARCHAR(50) NOT NULL,

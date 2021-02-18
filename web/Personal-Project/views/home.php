@@ -341,7 +341,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email address</label>
-                                    <input type="email" class="form-control" id="email" required name="cus_email">
+                                    <input type="email" class="form-control" id="email" required name="cus_mail">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Cell Phone</label>
@@ -352,7 +352,12 @@
                                     <textarea class="form-control" name="cus_body" id="comment" cols="30" rows="10" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-light">Send message</button>
-                                <input type="hidden" name="action" value="inbox">
+                                <?php
+                                    if(isset( $_SESSION['message'])){
+                                        echo  $_SESSION['message'];
+                                    }
+                                ?>
+                                <input type="hidden" name="action" value="contactus">
                             </form>
                         </div>
                         </div>
