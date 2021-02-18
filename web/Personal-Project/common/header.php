@@ -22,6 +22,9 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/memberships/index.php">Memberships</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/mails/index.php">Mails</a>
                                             </li>';
                                     } 
                                 }

@@ -214,5 +214,8 @@ function buildMemList($dataMem,$dataProd){
                         $list.= '</table></div></div>';
                         return $list;
 }
+function buildMails($dataMails){
+    
+}
 
 ?>

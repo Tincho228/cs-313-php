@@ -49,6 +49,8 @@ case 'receive':
    
     break;
 default:
+    $dataMails = getMails();
+    $mails =buildMails($dataMails);
     include "../views/mails.php";
 break;
 }

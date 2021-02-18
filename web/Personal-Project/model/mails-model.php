@@ -20,7 +20,21 @@ function regContactUs($cus_name, $cus_phone, $cus_mail, $cus_body){
     // Return the indication of success (rows changed)
     return $rowsChanged;
 }
-
+function getMails(){
+      // Create a connection object using the phpmotors connection function
+      $db = herokuConnection();
+      // The SQL statement
+      $sql = 'SELECT * FROM public.contactus';
+      // Create the prepared statement using the phpmotors connection
+      $stmt = $db->prepare($sql);
+      // Insert the data
+      $stmt->execute();
+      // We expect a single record to be returned, thus the use of the fetch() method.
+      $clientData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      // Close the database interaction
+      $stmt->closeCursor();
+      return $clientData;
+}
 
 
 ?>
