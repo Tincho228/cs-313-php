@@ -22,6 +22,7 @@ $action = filter_input(INPUT_POST, 'action');
 // Check if the firstname cookie exists, get its value
 switch ($action){
 case 'contactus':
+    echo "here";/*
     $cus_name = filter_input(INPUT_POST, 'cus_name', FILTER_SANITIZE_STRING);
     $cus_phone = filter_input(INPUT_POST, 'cus_phone', FILTER_SANITIZE_STRING);
     $cus_mail = filter_input(INPUT_POST, 'cus_mail', FILTER_SANITIZE_EMAIL);
@@ -40,7 +41,7 @@ case 'contactus':
         $_SESSION['message'] = '<p>Sorry '.$cus_name.', but the operation failed. Please try again.</p>';
         header('location:../index.php'); 
         exit;
-    }
+    }*/
     break;
 case 'send':
    
