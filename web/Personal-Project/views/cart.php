@@ -17,7 +17,7 @@
     include "../common/header.php";
 ?>
 <main>
-    <div class="container">
+    <div class="container" style="margin-top:30px; margin-bottom:30px;">
     <div class="table-responsive position-relative bg-light">
             <h2>ORDER DETAILS</h2>
             <table class="table table-stripped">

@@ -17,7 +17,7 @@
     include "../common/header.php";
 ?>
 <main>
-    <div class="container">
+    <div class="container" style="margin-top:30px; margin-bottom:30px;">
         <div class="container-fluid bg-light">
             <div class="col">
                 <img src="../images/purchase.jpg" style="width:25%;display:block;margin:auto;" alt="image of purchase">

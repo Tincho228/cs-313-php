@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php 
+    if(!$_SESSION['loggedin']){ 
+        header('location:../index.php');
+        exit;
+    }elseif($_SESSION['clientData']['cl_level'] < 2){
+        header('location:../index.php');
+        exit;
+    }
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>

@@ -17,7 +17,7 @@
     include "../common/header.php";
 ?>
 <main>
-    <div class="container">
+    <div class="container" style="margin-top:30px; margin-bottom:30px;">
     <div class="container-fluid position-relative bg-light">
                 <h2 class="m-10">Checkout</h2>
             <div class="row row-cols-2">  

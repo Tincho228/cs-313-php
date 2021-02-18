@@ -12,9 +12,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project">Home</a>
-                                </li>
+                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project">Home</a></li>
                                 <?php
                                 if(isset($_SESSION['loggedin']) && ($_SESSION['clienData']['cl_level'] === 3)){
                                     echo '
@@ -24,28 +22,24 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/memberships/index.php">Memberships</a>
                                             </li>';
+                                }
                                 ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact Us</a>
-                                </li>
-                                <li class="nav-item">
+                                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a>
+                                </li><li class="nav-item">
                                     <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php"><i class="fas fa-cart-arrow-down"></i> Cart
                                     <span class="text-danger">
-                                    <?php
-                                        if(isset($_SESSION['shopping_cart'])){
-                                            $count = count($_SESSION['shopping_cart']);
-                                            echo "(".$count.")";
-                                        }else {
-                                            echo "0";
-                                        }?>
+                                                            <?php
+                                                                if(isset($_SESSION['shopping_cart'])){
+                                                                    $count = count($_SESSION['shopping_cart']);
+                                                                    echo "(".$count.")";
+                                                                }else {
+                                                                    echo "0";
+                                                            }?>
                                     </span></a>
                                 </li>
                             </ul>
                         </div>
-                        
-
-                        <?php 
-        
+                        <?php        
                             if(isset($_SESSION['loggedin'])){
                                 // Delete cookie based welcome message if loggedin
                                 if(isset($_COOKIE['firstname'])){
@@ -58,7 +52,6 @@
                                 $_SESSION['cookieFirstname'] = filter_input(INPUT_COOKIE, 'firstname', FILTER_SANITIZE_STRING);
                                 echo "<span class='nav-link text-light'>Succesfully registered, ".$_SESSION['cookieFirstname']."</span>";
                             }
-
                         ?>
                         <?php
                             // if is not logged in show My Account
@@ -69,12 +62,7 @@
                             } else {
                                 echo '<a class="nav-link text-light" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/accounts/index.php?action=login" title="login"><i class="fa fa-user" aria-hidden="true"></i> Log In</a>';
                                 }
-                            ?>
-                        
-                                           
-                        
-                    
-                        
+                            ?>    
                     </div>
                 </nav>
                 <div class="jumbotron jumbotron-fluid bg-transparent">
