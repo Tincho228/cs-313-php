@@ -333,7 +333,7 @@
                         <div class="col section-padding ">
                         </div>
                         <div class="col-md-6 col-sm-12 section-padding">
-                            <form method="POST" action="../mails/index.php" class="bg-free-class-form">
+                            <form method="POST" action="mails/index.php" class="bg-free-class-form">
                                 <h1 class="text-center text-light">Message Us For a 1 on 1 Coaching Session!</h1>
                                 <div class="form-group">
                                     <label for="name">Name</label>
