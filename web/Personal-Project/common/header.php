@@ -14,8 +14,8 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project">Home</a></li>
                                 <?php
-                                if($_SESSION['loggedin']){
-                                    if($_SESSION['clienData']['cl_level'] > 2){
+                                if(isset($_SESSION['loggedin'])){
+                                    if($_SESSION['clientData']['cl_level'] > 2){
                                     echo '
                                             <li class="nav-item">
                                                 <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/products/index.php">Products</a>
