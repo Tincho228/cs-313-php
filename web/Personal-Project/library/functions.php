@@ -245,7 +245,7 @@ function buildMails($dataMails){
                             <p style="margin-left:20px;">'.$value['cus_mail'].', phone: '.$value['cus_phone'].'</br>
                             <strong>Message: </strong>'.$value['cus_body'].'
                             </p>
-                            <div class="row justify-right">
+                            <div class="row justify-content-end">
                             <a class="btn btn-primary" href="../mails/index.php?action=eliminate&cus_id='.urlencode($value['cus_id']).'"><i class="fa fa-trash" aria-hidden="true"></i> Eliminate</a>    
                             </div>
                         </div>

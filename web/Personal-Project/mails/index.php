@@ -43,7 +43,15 @@ case 'contactus':
     }
     break;
 case 'eliminate':
-   
+    $cus_id = filter_input(INPUT_GET, 'cus_id', FILTER_SANITIZE_NUMBER_INT);
+    $outcome = eliminateMail($cus_id);
+    if ($outcome === 1) {
+        header('location:index.php');
+        exit;  
+    } else {
+        header('location:index.php');
+        exit;
+    }
     break;
 case 'receive':
    

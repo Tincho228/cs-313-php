@@ -35,6 +35,15 @@ function getMails(){
       $stmt->closeCursor();
       return $clientData;
 }
-
+function eliminateMail($cus_id){
+    $db = herokuConnection();
+    $sql ='DELETE FROM public.contactus WHERE cus_id = :cus_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':cus_id', $cus_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
 
 ?>

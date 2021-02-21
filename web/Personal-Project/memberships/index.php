@@ -63,7 +63,6 @@ case 'eliminate':
         exit;
     }
     break;
-    break;
 default:
     $dataProd = getAllproducts();
     $dataMem = getMemData();
