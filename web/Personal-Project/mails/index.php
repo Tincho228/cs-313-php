@@ -42,7 +42,7 @@ case 'contactus':
         exit;
     }
     break;
-case 'send':
+case 'eliminate':
    
     break;
 case 'receive':
