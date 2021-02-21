@@ -215,7 +215,7 @@ function buildMemList($dataMem,$dataProd){
                         return $list;
 }
 function buildMails($dataMails){
-    $m = '';
+    $m = null;
                     foreach($dataMails as $value){
                     $m.='
                     <div class="col">    
@@ -233,7 +233,6 @@ function buildMails($dataMails){
                     </div>
                     <hr>';
                     }
-    $m.='';
     return $m;                
 }
 
