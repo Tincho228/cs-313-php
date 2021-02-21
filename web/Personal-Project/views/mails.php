@@ -23,11 +23,36 @@
 ?>
 <main>
     <div class="container" style="margin-top:20px; margin-bottom:20px;">
-        <?php
-            if(isset($mails)){
-                echo $mails;
-            }
-        ?>
+    <div class="row align-content-center" style="height:80px; background-color:whitesmoke; border: 1px solid lightgray;">
+                <h2 style="margin-left:30px; ">Mails</h2>
+            </div>
+            <div class="row">
+                <div class="col-4" style="padding:30px;border: 1px solid lightgray;">
+                    <div class="btn btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"> New mail</i></div>
+                    <div class="btn btn-light btn-block ">All Emails</div>
+                    <div class="btn btn-light btn-block ">Received</div>
+                    <div class="btn btn-light btn-block ">Sent</div>
+                    <div class="btn btn-light btn-block active">Contact us</div>
+                </div>
+                <div class="col-8">
+                    <div class="row" style="padding:20px;border: 1px solid lightgray;">
+                        <div class="form-check">
+                            <input class="form-check-input" style="width:24px;height:24px;" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" style="font-size:24px; margin-left:20px;" for="defaultCheck1">
+                                CONTACT US
+                            </label>
+                        </div>
+                    </div>';
+                    <?php
+                        if(isset($mails)){
+                            echo $mails;
+                        }else {
+                            echo '<p>No messages from Contact Us page</p>';
+                        }
+                    ?>                   
+                </div>
+            </div>';
+        
     </div>
 </main>
 <?php
