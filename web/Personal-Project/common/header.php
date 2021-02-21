@@ -29,7 +29,7 @@
                                     } 
                                 }
                                 ?>
-                                <li class="nav-item"><a class="nav-link" href="#contactUs">Contact Us</a>
+                                <li class="nav-item"><a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/index.php#contactUs">Contact Us</a>
                                 </li><li class="nav-item">
                                     <a class="nav-link" href="https://powerful-sierra-77608.herokuapp.com/Personal-Project/orders/index.php"><i class="fas fa-cart-arrow-down"></i> Cart
                                     <span class="text-danger">
